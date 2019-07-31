@@ -2,8 +2,15 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    jest: true,
-    'cypress/globals': true
+    jest: true
+    // 'cypress/globals': true
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: './webpack.common.js'
+      }
+    }
   },
   extends: [
     'airbnb',
@@ -11,7 +18,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:cypress/recommended'
   ],
-  plugins: ['prettier'],
+  plugins: ['react', 'prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -24,9 +31,7 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', 'jsx-a11y'],
-  cypress,
-
-  // rules: {}
+  // cypress,
   rules: {
     'one-var': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
