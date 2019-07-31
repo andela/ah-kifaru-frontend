@@ -8,3 +8,12 @@ examples
 cypress/fixtures
 cypress/plugins
 cypress/support
+
+#coverage
+coverage
+
+#.env
+.env
+
+#snapshots
+src/tests/__snapshots__
