@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 
