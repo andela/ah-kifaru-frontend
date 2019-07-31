@@ -12,6 +12,7 @@ module.exports = {
       '@containers': path.resolve(__dirname, 'src/containers'),
       '@reducers': path.resolve(__dirname, 'src/reducers'),
       '@actions': path.resolve(__dirname, 'src/actions'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
       '@config': path.resolve(__dirname, 'src/'),
       '@fonts': path.resolve(__dirname, 'public/assets/fonts'),
       '@images': path.resolve(__dirname, 'public/assets/images'),
