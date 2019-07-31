@@ -2,9 +2,15 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    jest: true
+    jest: true,
+    'cypress/globals': true
   },
-  extends: ['airbnb', 'prettier', 'plugin:jsx-a11y/recommended'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'plugin:jsx-a11y/recommended',
+    'plugin:cypress/recommended'
+  ],
   plugins: ['prettier'],
   globals: {
     Atomics: 'readonly',
@@ -18,6 +24,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', 'jsx-a11y'],
+  cypress,
+
   // rules: {}
   rules: {
     'one-var': 0,
