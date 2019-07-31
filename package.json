@@ -10,7 +10,8 @@
     "format": "pretty-quick",
     "develop": "webpack --env.mode development --watch",
     "build": "webpack --env.mode production",
-    "start": "webpack-dev-server --hot --env.mode development --open"
+    "start": "webpack-dev-server --hot --env.mode development --open",
+    "cypress": "cypress open"
   },
   "husky": {
     "hooks": {
@@ -44,9 +45,11 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
+    "cypress": "^3.4.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-cypress": "^2.6.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
