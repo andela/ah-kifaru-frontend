@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Homepage extends Component {
-  state = {};
-  style = {
-    backgroundColor: 'red',
-    color: 'white',
-    padding: '7px 9px',
-    marginLeft: '40%',
-    border: 'none'
-  };
-  render() {
-    return (
-      <>
-        <h1>Welcome to ErrorSwag, what on your mind?</h1>
-        <img src="../../public/images/logo.png" alt="errorswag logo" />
-        <Link to="/login">
-          <button type="button" style={this.style}>
-            Login
-          </button>
-        </Link>
-      </>
-    );
-  }
-}
+const Homepage = () => {
+  return (
+    <div className="m-20 text-center">
+      <h1 className="text-green-700">
+        Welcome to ErrorSwag, what on your mind?
+      </h1>
+      <img src="../../public/images/logo.png" alt="errorswag logo" />
+      <Link to="/login">
+        <button
+          type="button"
+          className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
+        >
+          Login
+        </button>
+      </Link>
+    </div>
+  );
+};
 
 export default Homepage;
