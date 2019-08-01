@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application test should work fine 1`] = `
+<BrowserRouter>
+  <Routes />
+</BrowserRouter>
+`;
+
+exports[`Application test should work fine 2`] = `
+<Fragment>
+  <Link
+    to="/"
+  >
+    <button
+      style={
+        Object {
+          "backgroundColor": "sky-blue",
+          "border": "none",
+          "color": "black",
+          "marginLeft": "80%",
+          "padding": "7px 9px",
+        }
+      }
+      type="button"
+    >
+      Home
+    </button>
+  </Link>
+  <form>
+    <label
+      style={
+        Object {
+          "height": "2em",
+          "width": "50%",
+        }
+      }
+    >
+      Email
+    </label>
+    <input
+      placeholder="example@email.com"
+      style={
+        Object {
+          "border": "1px solid #333",
+          "height": "2em",
+          "width": "100%",
+        }
+      }
+      type="email"
+    />
+    <label
+      style={
+        Object {
+          "height": "2em",
+          "width": "50%",
+        }
+      }
+    >
+      Password
+    </label>
+    <input
+      placeholder="......."
+      style={
+        Object {
+          "border": "1px solid #333",
+          "height": "2em",
+          "width": "100%",
+        }
+      }
+      type="password"
+    />
+    <input
+      style={
+        Object {
+          "backgroundColor": "sky-blue",
+          "border": "none",
+          "color": "black",
+          "marginLeft": "80%",
+          "padding": "7px 9px",
+        }
+      }
+      type="submit"
+      value="login"
+    />
+  </form>
+</Fragment>
+`;
+
+exports[`Application test should work fine 3`] = `
+<Fragment>
+  <h1>
+    Welcome to ErrorSwag, what on your mind?
+  </h1>
+  <img
+    alt="errorswag logo"
+    src="../../public/images/logo.png"
+  />
+  <Link
+    to="/login"
+  >
+    <button
+      style={
+        Object {
+          "backgroundColor": "red",
+          "border": "none",
+          "color": "white",
+          "marginLeft": "40%",
+          "padding": "7px 9px",
+        }
+      }
+      type="button"
+    >
+      Login
+    </button>
+  </Link>
+</Fragment>
+`;
+
+exports[`Application test should work fine 4`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/login"
+  />
+</Switch>
+`;

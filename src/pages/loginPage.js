@@ -2,16 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class LoginPage extends Component {
-  constructor() {
-    super();
-    this.click = this.click.bind(this);
-  }
   state = {};
-  click(event) {
-    event.preventDefault();
-    console.log('Yeah stop clicking button not working yet');
-    return;
-  }
   style = {
     backgroundColor: 'sky-blue',
     color: 'black',
@@ -45,12 +36,7 @@ class LoginPage extends Component {
           />
           <label style={this.label}>Password</label>
           <input type="password" placeholder="......." style={this.input} />
-          <input
-            type="submit"
-            value="login"
-            onClick={this.click}
-            style={this.style}
-          />
+          <input type="submit" value="login" style={this.style} />
         </form>
       </>
     );
