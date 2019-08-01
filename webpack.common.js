@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './src/index.js',
-    vendor: './src/vendor.js'
+    main: './src/index.js'
   },
   resolve: {
     extensions: ['.jsx', '.js'],
@@ -37,6 +36,14 @@ module.exports = {
             outputPath: 'imgs'
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader'
+        ]
       }
     ]
   }
