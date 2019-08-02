@@ -3,9 +3,15 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/'],
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$':
       '<rootDir>/__mocks__/fileMock.js',
-    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js'
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+    '^@config(.*)$': '<rootDir>/src/config$1',
+    '^@components(.*)$': '<rootDir>/src/components$1',
+    '^@containers(.*)$': '<rootDir>/src/containers$1',
+    '^@actions(.*)$': '<rootDir>/src/actions$1',
+    '^@pages(.*)$': '<rootDir>/src/pages$1',
+    '@/(.*)$': '<rootDir>/src$1'
   },
   collectCoverageFrom: [
     '**/*.{js,jsx}',
@@ -23,6 +29,19 @@ module.exports = {
     '!webpack.common.js',
     '!webpack.config.js',
     '!**/coverage/**',
-    '!**/tests/**'
+    '!**/tests/**',
+    '!src/actions/**',
+    '!src/assets/**',
+    '!src/reducers/**',
+    '!src/store/**',
+    '!src/index.js',
+    '!src/config/**',
+    '!src/containers/**',
+    '!index.js',
+    '!src/pages/home.js',
+    '!postcss.config.js',
+    '!src/utils/**',
+    '!**/cypress/**',
+    '!**/*.css'
   ]
 };

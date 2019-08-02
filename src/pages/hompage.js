@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
+import Footer from '../components/Footer/Footer';
 
 const Homepage = () => {
   return (
@@ -17,6 +18,7 @@ const Homepage = () => {
           Login
         </button>
       </Link>
+      <Footer />
     </div>
   );
 };

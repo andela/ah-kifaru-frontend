@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer layout should render without crashing 1`] = `
+<footer
+  className="footer flex flex-wrap w-full justify-center px-5"
+>
+  <div
+    className="sm:w-1/2 h-8"
+  >
+    <p
+      className=" flex justify-start"
+    >
+      Designed by Kifaru Team
+    </p>
+  </div>
+  <div
+    className="sm:w-1/2 h-8"
+  >
+    <ul
+      className="flex justify-end items-center"
+    >
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <[object Object] />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <[object Object] />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <[object Object] />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <[object Object] />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <[object Object] />
+      </li>
+    </ul>
+  </div>
+</footer>
+`;

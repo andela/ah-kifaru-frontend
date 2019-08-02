@@ -28,7 +28,22 @@ module.exports = {
         }
       },
       {
-        test: /\.(svg|png|jpeg|jpg)$/,
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: {
+                  removeViewBox: false
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpeg|jpg)$/,
         use: {
           loader: 'file-loader',
           options: {
