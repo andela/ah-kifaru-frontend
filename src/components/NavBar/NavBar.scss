@@ -1,0 +1,90 @@
+@import '../../../public/styles/colors.scss';
+
+.logo {
+  width: 163px;
+  height: 55px;
+}
+
+.avatar {
+  &:after {
+    content: url('../../../public/images/arrow_down.svg');
+    margin-left: 1rem;
+  }
+}
+
+.btn {
+  @screen sm {
+    @apply mx-3;
+  }
+  @screen md {
+    @apply mx-5;
+  }
+  @apply flex justify-center items-center;
+}
+
+.btn:focus {
+  @apply outline-none;
+}
+
+.small-button {
+  @extend .btn;
+  width: 35px;
+}
+
+.hamburger span {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 20px;
+  background: $black;
+  position: absolute;
+  display: block;
+  content: '';
+  &:before,
+  &:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  &:before {
+    top: -8px;
+    width: 28px;
+  }
+  &:after {
+    bottom: -8px;
+    width: 13px;
+  }
+}
+
+.hamburger {
+  span {
+    transition: all 500ms ease-in-out;
+    &:before,
+    &:after {
+      transition: all 500ms ease-in-out;
+    }
+  }
+  button[data-active] span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+      width: 28px;
+    }
+  }
+}
+
+.wrapper {
+  background-color: $white;
+  box-shadow: 0 2px 2px -2px #c4c4c490;
+}
