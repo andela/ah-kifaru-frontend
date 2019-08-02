@@ -22,3 +22,5 @@ coverage
 #snapshots
 src/tests/__snapshots__
 __snapshots__
+
+**/.DS_Store
