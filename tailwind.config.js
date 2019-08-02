@@ -1,4 +1,6 @@
-const { colors } = require('tailwindcss/defaultTheme');
+const {
+  colors: { teal, orange, pink, ...colors }
+} = require('tailwindcss/defaultTheme');
 
 module.exports = {
   theme: {
@@ -9,6 +11,7 @@ module.exports = {
       xl: { min: '1200px' }
     },
     textColor: {
+      ...colors,
       primary: '#3dbfb7',
       secondary: '#313131',
       danger: '#fc4949',

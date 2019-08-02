@@ -6,7 +6,7 @@ let action;
 let newState;
 const user = { email: 'mylove@gmail.com', password: 'mylove123' };
 describe('Auth Reducer', () => {
-  it('should return initial state for unknown action types', () => {
+  it('should return initial state for unkwon action types', () => {
     action = { type: null };
     newState = authReducer(initialState, action);
     expect(newState).toEqual(initialState);

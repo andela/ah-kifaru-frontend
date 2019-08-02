@@ -3,11 +3,10 @@ import { BrowserRouter, Switch } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import LoginPage from '@pages/loginPage';
+import LoginPage from '@pages/LoginPage';
 import HomePage from '@pages/homePage';
 import NotFoundPage from '@pages/notFoundPage';
 import Menu from '../src/components/userMenu';
-import Footer from '../src/components/Footer/index';
 import Auth from '../src/components/auth';
 
 import App from '../src/routes/AppRouter';
@@ -21,6 +20,14 @@ const store = mockStore({
     status: 'rest'
   }
 });
+const props = {
+  authAction: jest.fn(),
+  status: '',
+  isAuthenticated: false,
+  error: null,
+  location: { url: '/articles' },
+  history: { push: jest.fn() }
+};
 
 describe('Application test', () => {
   it('should render index page', () => {
@@ -50,7 +57,7 @@ describe('Application test', () => {
     const wrapper = mount(
       <Provider store={store}>
         <BrowserRouter>
-          <LoginPage />
+          <LoginPage {...props} />
         </BrowserRouter>
       </Provider>
     );
@@ -91,11 +98,6 @@ describe('Application test', () => {
     expect(wrapper.find('Link').length).toBeGreaterThan(1);
     expect(wrapper.find('ul')).toHaveLength(1);
     expect(wrapper.find('li').length).toBeGreaterThan(1);
-  });
-  it('should render without crashing', () => {
-    const wrapper = mount(<Footer />);
-
-    expect(toJson(wrapper)).toMatchSnapshot();
   });
 
   it('should renders without crashing', () => {

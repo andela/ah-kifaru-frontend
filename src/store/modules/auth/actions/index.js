@@ -41,12 +41,13 @@ export const authAction = ({
 }) => async dispatch => {
   const { username = undefined, email, password } = userData;
   dispatch(authPending());
+
   try {
     const authRoute = username ? 'signup' : 'login';
 
     const details = username
-      ? { username, email, password }
-      : { username, password };
+      ? { email, password, username }
+      : { email, password };
 
     const response = await axios({
       method: 'post',

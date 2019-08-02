@@ -1,0 +1,28 @@
+@import '../../../public/styles/colors.scss';
+
+body {
+  background: $dark-grey;
+}
+
+.auth-bg {
+  background-image: url('../../assets/images/auth-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.empty-fields {
+  color: $danger !important;
+}
+
+.login-form-logo {
+  max-width: 47%;
+}
+
+.login-btn {
+  background: $primary;
+}
+
+.text-color {
+  color: $primary;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import * as Toastr from 'toastr';
+import { render } from 'react-dom';
 import App from './routes/AppRouter';
 import store from './store';
 import './main.scss';
