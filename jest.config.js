@@ -1,47 +1,32 @@
 module.exports = {
+  setupFiles: ['<rootDir>/__test__/setup.js'],
   coverageDirectory: 'coverage',
-  testPathIgnorePatterns: ['/node_modules/'],
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$'],
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$':
-      '<rootDir>/__mocks__/fileMock.js',
-    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+    '.+\\.(css|scss)$': 'identity-obj-proxy',
+    '\\.svg': '<rootDir>/__test__/__mock__/svgrMock.js',
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)$':
+      'jest-transform-stub',
     '^@config(.*)$': '<rootDir>/src/config$1',
     '^@components(.*)$': '<rootDir>/src/components$1',
-    '^@containers(.*)$': '<rootDir>/src/containers$1',
-    '^@actions(.*)$': '<rootDir>/src/actions$1',
+    '^@modules(.*)$': '<rootDir>/src/store/modules$1',
     '^@pages(.*)$': '<rootDir>/src/pages$1',
+    '^@assets(.*)$': '<rootDir>/src/assets$1',
     '@/(.*)$': '<rootDir>/src$1'
   },
   collectCoverageFrom: [
-    '**/*.{js,jsx}',
-    '!**/node_modules/**',
-    '!jest.config.js',
-    '!**/dist/**',
-    '!**/webpack-build-utils/**',
-    '!README.md',
-    'Procfile',
-    'Postcss.config.js',
-    '!package.json',
-    '!package-lock.json',
-    '!cypress.json',
-    '!<rootDir>/server.js',
-    '!webpack.common.js',
-    '!webpack.config.js',
-    '!**/coverage/**',
-    '!**/tests/**',
-    '!src/actions/**',
-    '!src/assets/**',
-    '!src/reducers/**',
-    '!src/store/**',
-    '!src/index.js',
-    '!src/config/**',
-    '!src/containers/**',
-    '!index.js',
-    '!src/pages/home.js',
-    '!postcss.config.js',
-    '!src/utils/**',
-    '!**/cypress/**',
-    '!**/*.css'
-  ]
+    'src/**/*.{js,jsx}',
+    '!<rootDir>/__test__/**/*.(spec|test).{js,jsx}'
+  ],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/node_modules',
+    '<rootDir>/dist/',
+    '<rootDir>/src/utils',
+    '<rootDir>/src/components/icons',
+    '<rootDir>/src/index.js'
+  ],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
+  transform: {
+    '^.+\\.(js|jsx|mjs)$': '<rootDir>/node_modules/babel-jest'
+  }
 };
