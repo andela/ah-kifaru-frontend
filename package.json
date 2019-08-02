@@ -10,6 +10,7 @@
     "prettier": "prettier **/*.{js,json} --write",
     "format": "pretty-quick",
     "develop": "webpack --env.mode development --watch",
+    "heroku-postbuild": "webpack --env.mode production",
     "build": "webpack --env.mode production",
     "start": "webpack-dev-server --hot --env.mode development --open",
     "cypress": "cypress open",
