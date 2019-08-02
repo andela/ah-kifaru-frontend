@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.png';
 
 const Homepage = () => {
   return (
@@ -7,7 +8,7 @@ const Homepage = () => {
       <h1 className="text-green-700">
         Welcome to ErrorSwag, what on your mind?
       </h1>
-      <img src="../../public/images/logo.png" alt="errorswag logo" />
+      <img src={logo} alt="errorswag logo" />
       <Link to="/login">
         <button
           type="button"
