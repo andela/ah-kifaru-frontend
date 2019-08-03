@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application test should renders without crashing 1`] = `
+<cards>
+  <div
+    className="flex justify-center w-full md:hidden "
+  >
+    <div
+      className="max-w-sm flex items-center h-screen overflow-hidden w-full"
+    >
+      <div
+        className="flex justify-center items-center h-screen flex-col w-full"
+      >
+        <div
+          className="flex flex-col items-center"
+        >
+          <a
+            className="bg-teal-500  text-white text-center text-xs w-32  uppercase  py-3 px-5 "
+            href="/login"
+          >
+            LOGIN
+          </a>
+          <a
+            className="bg-white-500 mt-6  text-center border border-red-500  w-32 text-xs py-3 px-1 uppercase text-red-600"
+            href="/signup"
+          >
+            get started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</cards>
+`;
