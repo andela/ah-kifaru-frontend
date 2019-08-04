@@ -1,13 +1,10 @@
 import React from 'react';
 import './Footer.css';
-
-import {
-  YoutubeIcon,
-  FacebookIcon,
-  LinkedInIcon,
-  InstagramIcon,
-  TwitterIcon
-} from '../../assets/icons';
+import YoutubeIcon from '../../assets/icons/youtube';
+import FacebookIcon from '../../assets/icons/facebook';
+import LinkedInIcon from '../../assets/icons/linkedin';
+import InstagramIcon from '../../assets/icons/instagram';
+import TwitterIcon from '../../assets/icons/twitter';
 
 const Footer = () => {
   return (

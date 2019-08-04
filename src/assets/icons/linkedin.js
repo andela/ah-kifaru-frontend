@@ -1,4 +1,7 @@
-	  <svg
+import React from 'react';
+
+const linkedin = () => (
+  <svg
     width="15"
     height="15"
     viewBox="0 0 28 27"
@@ -10,3 +13,6 @@
       fill="#313131"
     />
   </svg>
+);
+
+export default linkedin;

@@ -21,7 +21,13 @@ module.exports = {
   plugins: ['react', 'prettier'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    SharedArrayBuffer: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    shallow: true,
+    mount: true,
+    expect: true,
+    render: true,
+    toJson: true
   },
   parserOptions: {
     ecmaFeatures: {
@@ -43,6 +49,7 @@ module.exports = {
     'comma-dangle': 0,
     curly: ['error', 'multi-line'],
     'import/no-unresolved': [2, { commonjs: true }],
-    'no-shadow': ['error', { allow: ['req', 'res', 'err'] }]
+    'no-shadow': ['error', { allow: ['req', 'res', 'err'] }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
   }
 };

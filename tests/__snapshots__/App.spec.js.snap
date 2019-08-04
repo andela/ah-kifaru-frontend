@@ -1,5 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Application test should render without crashing 1`] = `
+<Menu>
+  <ul
+    className="absolute right-0 top-0 mt-10 p-5  shadow-lg bg-white z-10 block text-left w-100 menu"
+  >
+    <li
+      className="p-3 whitespace-no-wrap text-sm md:text-base text-black-600 hover:text-gray-800 hover:bg-gray-100"
+    >
+      <a
+        className="px-2 py-1"
+        href="/"
+      >
+        <span>
+          Create Article
+        </span>
+      </a>
+    </li>
+    <li
+      className="p-3 whitespace-no-wrap text-sm md:text-base text-black hover:text-gray-800 hover:bg-gray-100"
+    >
+      <a
+        className="px-2 py-1"
+        href="/"
+      >
+        <span>
+          My Profile
+        </span>
+      </a>
+    </li>
+    <li
+      className="p-3 whitespace-no-wrap text-sm md:text-base text-black hover:text-gray-800 hover:bg-gray-100"
+    >
+      <a
+        className="px-2 py-1"
+        href="/"
+      >
+        <span>
+          Admin Management
+        </span>
+      </a>
+    </li>
+    <li
+      className="p-3 whitespace-no-wrap text-sm md:text-base text-black  hover:text-gray-800 hover:bg-gray-100"
+    >
+      <a
+        className="px-2 py-1"
+        href="/"
+      >
+        <span>
+          Logout
+        </span>
+      </a>
+    </li>
+  </ul>
+</Menu>
+`;
+
+exports[`Application test should render without crashing 2`] = `
+<footer
+  className="footer flex flex-wrap w-full justify-center px-5"
+>
+  <div
+    className="sm:w-1/2 h-8"
+  >
+    <p
+      className=" flex justify-start"
+    >
+      Designed by Kifaru Team
+    </p>
+  </div>
+  <div
+    className="sm:w-1/2 h-8"
+  >
+    <ul
+      className="flex justify-end items-center"
+    >
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <twitter />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <facebook />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <instagram />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <youtube />
+      </li>
+      <li
+        className="mx-1 px-2 py-1 cursor-pointer"
+      >
+        <linkedin />
+      </li>
+    </ul>
+  </div>
+</footer>
+`;
+
 exports[`Application test should work fine Home Page 1`] = `
 <div
   className="m-20 text-center"
@@ -24,6 +130,7 @@ exports[`Application test should work fine Home Page 1`] = `
     </button>
   </Link>
   <Footer />
+  <Menu />
 </div>
 `;
 
@@ -34,97 +141,12 @@ exports[`Application test should work fine on App 1`] = `
 </BrowserRouter>
 `;
 
-exports[`Application test should work fine on Login Page 1`] = `
-<Fragment>
-  <Link
-    to="/"
-  >
-    <button
-      style={
-        Object {
-          "backgroundColor": "sky-blue",
-          "border": "none",
-          "color": "black",
-          "marginLeft": "80%",
-          "padding": "7px 9px",
-        }
-      }
-      type="button"
-    >
-      Home
-    </button>
-  </Link>
-  <form>
-    <label
-      style={
-        Object {
-          "height": "2em",
-          "width": "50%",
-        }
-      }
-    >
-      Email
-    </label>
-    <input
-      placeholder="example@email.com"
-      style={
-        Object {
-          "border": "1px solid #333",
-          "height": "2em",
-          "width": "100%",
-        }
-      }
-      type="email"
-    />
-    <label
-      style={
-        Object {
-          "height": "2em",
-          "width": "50%",
-        }
-      }
-    >
-      Password
-    </label>
-    <input
-      placeholder="......."
-      style={
-        Object {
-          "border": "1px solid #333",
-          "height": "2em",
-          "width": "100%",
-        }
-      }
-      type="password"
-    />
-    <input
-      style={
-        Object {
-          "backgroundColor": "sky-blue",
-          "border": "none",
-          "color": "black",
-          "marginLeft": "80%",
-          "padding": "7px 9px",
-        }
-      }
-      type="submit"
-      value="login"
-    />
-  </form>
-</Fragment>
-`;
-
 exports[`Application test should work fine on Routes 1`] = `
 <Switch>
   <Route
     component={[Function]}
     exact={true}
     path="/"
-  />
-  <Route
-    component={[Function]}
-    exact={true}
-    path="/login"
   />
 </Switch>
 `;

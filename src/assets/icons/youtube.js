@@ -1,3 +1,6 @@
+import React from 'react';
+
+const youtube = () => (
   <svg
     width="20"
     height="15"
@@ -10,3 +13,6 @@
       fill="#313131"
     />
   </svg>
+);
+
+export default youtube;
