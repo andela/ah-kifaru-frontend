@@ -1,0 +1,18 @@
+.form-card{
+    background: grey;
+    height:100vh;
+}
+.bg-color{
+  background: #3DBFB7;  
+}
+.height{
+    height: 80%;
+}
+
+.auth-bg {
+    background-image: url('../../assets/images/auth-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height:632px; */
+  }

@@ -124,5 +124,10 @@ exports[`Application test should work fine on Routes 1`] = `
     exact={true}
     path="/login"
   />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/user"
+  />
 </Switch>
 `;
