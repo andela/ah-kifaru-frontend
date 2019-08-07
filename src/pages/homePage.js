@@ -1,25 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Layout from '../components/Layout';
-import logo from '../assets/images/logo.png';
+import Layout from '@components/Layout';
+import Banner from '@components/Banner/index';
+import ArticleCard from '../components/ArticleCard/index';
 
 const Homepage = () => {
   return (
     <Layout>
-      <div className="m-20 text-center">
-        <h1 className="text-green-800">
-          Welcome to ErrorSwag, what on your mind?
-        </h1>
-        <img src={logo} alt="errorswag logo" />
-        <Link to="/login">
-          <button
-            type="button"
-            className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-          >
-            Login
-          </button>
-        </Link>
-      </div>
+      <Banner />
+      <ArticleCard
+        title="Pointing towards a good test boosts engineers' confidence"
+        description="Things are going to be fine. All you need to do is stay focused and believe in yourself"
+        body="The journey to become world class may be scary and daunting. All you need to do is stay focused and believe in yourself"
+        imageUrl="imageUrl"
+        authorImage="author-image"
+        publishedDate="June 25"
+        author="Mark"
+        readTime="2 mins read"
+      />
     </Layout>
   );
 };

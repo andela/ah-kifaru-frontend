@@ -36,3 +36,16 @@ export default {
     }
   }
 };
+
+export const articleCardMockData = {
+  title: 'Pointing',
+  description:
+    'Things are going to be fine. All you need to do is stay focused and believe in yourself',
+  body:
+    'The journey to become world class may be scary and daunting. All you need to do is stay focused and believe in yourself',
+  image: 'image',
+  authorImage: 'author-image',
+  publishedDate: 'June 25',
+  author: 'Mark',
+  readTime: '2 mins read'
+};

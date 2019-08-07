@@ -1,0 +1,1224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application test it should render 404 PAGE without crashing 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <NotFoundPage>
+      <div
+        className="flex items-center justify-center flex-col h-screen"
+      >
+        <img
+          alt="404 Page"
+          className="sm:w-2/4 md:w-1/5"
+          src={
+            Object {
+              "process": [Function],
+            }
+          }
+        />
+        <h2
+          className="text-secondary my-6 md:w-2/5 text-center text-sm font-semibold"
+        >
+          THE PAGE YOU ARE LOOKING FOR MIGHT HAVE BEEN REMOVED, HAD ITS NAME CHANGED OR ITS TEMPORARILY UNAVAILABLE
+        </h2>
+        <Link
+          className="btn text-white bg-primary py-3 px-10 font-medium rounded"
+          title="Signup"
+          to="/"
+        >
+          <a
+            className="btn text-white bg-primary py-3 px-10 font-medium rounded"
+            href="/"
+            onClick={[Function]}
+            title="Signup"
+          >
+            GO HOME
+          </a>
+        </Link>
+      </div>
+    </NotFoundPage>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Application test it should render Home Page without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Homepage>
+        <Layout>
+          <Connect(NavBar)>
+            <NavBar
+              dispatch={[Function]}
+              isLoggedIn={false}
+              user={Object {}}
+            >
+              <nav
+                className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
+              >
+                <div
+                  className="logo flex items-center"
+                >
+                  <Link
+                    aria-labelledby="Error Swag Logo"
+                    className="flex items-center"
+                    to="/"
+                  >
+                    <a
+                      aria-labelledby="Error Swag Logo"
+                      className="flex items-center"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Errorswag logo"
+                        className="sm:w-8/12 md:w-full"
+                        src={
+                          Object {
+                            "process": [Function],
+                          }
+                        }
+                      />
+                    </a>
+                  </Link>
+                </div>
+                <div
+                  className="flex"
+                >
+                  <Link
+                    aria-labelledby="Search"
+                    className="small-button"
+                    to="/search"
+                  >
+                    <a
+                      aria-labelledby="Search"
+                      className="small-button"
+                      href="/search"
+                      onClick={[Function]}
+                    >
+                      <icon-mock
+                        className="h-5 w-5"
+                      />
+                    </a>
+                  </Link>
+                  <Link
+                    aria-labelledby="Notifications"
+                    className="small-button"
+                    to="/notifications"
+                  >
+                    <a
+                      aria-labelledby="Notifications"
+                      className="small-button"
+                      href="/notifications"
+                      onClick={[Function]}
+                    >
+                      <icon-mock
+                        className="h-6 w-6"
+                      />
+                    </a>
+                  </Link>
+                  <AuthButtons
+                    id="auth-buttons"
+                    show={true}
+                  >
+                    <Link
+                      aria-labelledby="Login"
+                      className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                      to="/login"
+                    >
+                      <a
+                        aria-labelledby="Login"
+                        className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                        href="/login"
+                        onClick={[Function]}
+                      >
+                        LOGIN
+                      </a>
+                    </Link>
+                    <Link
+                      aria-labelledby="Signup"
+                      className="btn red-button py-3 px-8 sm:hidden md:block"
+                      to="/signup"
+                    >
+                      <a
+                        aria-labelledby="Signup"
+                        className="btn red-button py-3 px-8 sm:hidden md:block"
+                        href="/signup"
+                        onClick={[Function]}
+                      >
+                        GET STARTED
+                      </a>
+                    </Link>
+                  </AuthButtons>
+                  <MenuIcon
+                    id="menu"
+                    isLoggedIn={false}
+                    menuOpen={false}
+                    toggleMenu={[Function]}
+                  >
+                    <button
+                      aria-expanded={false}
+                      aria-label="Menu"
+                      className="hamburger small-button sm:block md:hidden"
+                      data-active={false}
+                      id="hamburger"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span />
+                    </button>
+                  </MenuIcon>
+                </div>
+              </nav>
+            </NavBar>
+          </Connect(NavBar)>
+          <ArticleCard
+            author="Mark"
+            authorImage="author-image"
+            body="The journey to become world class may be scary and daunting. All you need to do is stay focused and believe in yourself"
+            description="Things are going to be fine. All you need to do is stay focused and believe in yourself"
+            imageUrl="imageUrl"
+            publishedDate="June 25"
+            readTime="2 mins read"
+            title="Pointing towards a good test boosts engineers' confidence"
+          >
+            <main
+              className="main flex items-center overflow-y-auto"
+            >
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </ArticleCard>
+          <Footer>
+            <footer
+              className="footer flex flex-wrap w-full justify-center px-10"
+            >
+              <div
+                className="md:w-1/2 h-8"
+              >
+                <p
+                  className=" flex justify-start"
+                >
+                  Designed by Kifaru Team
+                </p>
+              </div>
+              <div
+                className="md:w-1/2 h-8"
+              >
+                <ul
+                  className="flex justify-end items-center"
+                >
+                  <li
+                    className="mx-1 px-2 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </Footer>
+        </Layout>
+      </Homepage>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`Application test should not crash app 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <App>
+    <BrowserRouter>
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Switch>
+          <Route
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            exact={true}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            path="/"
+          >
+            <Homepage
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "createHref": [Function],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+            >
+              <Layout>
+                <Connect(NavBar)>
+                  <NavBar
+                    dispatch={[Function]}
+                    isLoggedIn={false}
+                    user={Object {}}
+                  >
+                    <nav
+                      className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
+                    >
+                      <div
+                        className="logo flex items-center"
+                      >
+                        <Link
+                          aria-labelledby="Error Swag Logo"
+                          className="flex items-center"
+                          to="/"
+                        >
+                          <a
+                            aria-labelledby="Error Swag Logo"
+                            className="flex items-center"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            <img
+                              alt="Errorswag logo"
+                              className="sm:w-8/12 md:w-full"
+                              src={
+                                Object {
+                                  "process": [Function],
+                                }
+                              }
+                            />
+                          </a>
+                        </Link>
+                      </div>
+                      <div
+                        className="flex"
+                      >
+                        <Link
+                          aria-labelledby="Search"
+                          className="small-button"
+                          to="/search"
+                        >
+                          <a
+                            aria-labelledby="Search"
+                            className="small-button"
+                            href="/search"
+                            onClick={[Function]}
+                          >
+                            <icon-mock
+                              className="h-5 w-5"
+                            />
+                          </a>
+                        </Link>
+                        <Link
+                          aria-labelledby="Notifications"
+                          className="small-button"
+                          to="/notifications"
+                        >
+                          <a
+                            aria-labelledby="Notifications"
+                            className="small-button"
+                            href="/notifications"
+                            onClick={[Function]}
+                          >
+                            <icon-mock
+                              className="h-6 w-6"
+                            />
+                          </a>
+                        </Link>
+                        <AuthButtons
+                          id="auth-buttons"
+                          show={true}
+                        >
+                          <Link
+                            aria-labelledby="Login"
+                            className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                            to="/login"
+                          >
+                            <a
+                              aria-labelledby="Login"
+                              className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                              href="/login"
+                              onClick={[Function]}
+                            >
+                              LOGIN
+                            </a>
+                          </Link>
+                          <Link
+                            aria-labelledby="Signup"
+                            className="btn red-button py-3 px-8 sm:hidden md:block"
+                            to="/signup"
+                          >
+                            <a
+                              aria-labelledby="Signup"
+                              className="btn red-button py-3 px-8 sm:hidden md:block"
+                              href="/signup"
+                              onClick={[Function]}
+                            >
+                              GET STARTED
+                            </a>
+                          </Link>
+                        </AuthButtons>
+                        <MenuIcon
+                          id="menu"
+                          isLoggedIn={false}
+                          menuOpen={false}
+                          toggleMenu={[Function]}
+                        >
+                          <button
+                            aria-expanded={false}
+                            aria-label="Menu"
+                            className="hamburger small-button sm:block md:hidden"
+                            data-active={false}
+                            id="hamburger"
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            <span />
+                          </button>
+                        </MenuIcon>
+                      </div>
+                    </nav>
+                  </NavBar>
+                </Connect(NavBar)>
+                <ArticleCard
+                  author="Mark"
+                  authorImage="author-image"
+                  body="The journey to become world class may be scary and daunting. All you need to do is stay focused and believe in yourself"
+                  description="Things are going to be fine. All you need to do is stay focused and believe in yourself"
+                  imageUrl="imageUrl"
+                  publishedDate="June 25"
+                  readTime="2 mins read"
+                  title="Pointing towards a good test boosts engineers' confidence"
+                >
+                  <main
+                    className="main flex items-center overflow-y-auto"
+                  >
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </main>
+                </ArticleCard>
+                <Footer>
+                  <footer
+                    className="footer flex flex-wrap w-full justify-center px-10"
+                  >
+                    <div
+                      className="md:w-1/2 h-8"
+                    >
+                      <p
+                        className=" flex justify-start"
+                      >
+                        Designed by Kifaru Team
+                      </p>
+                    </div>
+                    <div
+                      className="md:w-1/2 h-8"
+                    >
+                      <ul
+                        className="flex justify-end items-center"
+                      >
+                        <li
+                          className="mx-1 px-2 py-1 cursor-pointer"
+                        >
+                          <icon-mock />
+                        </li>
+                        <li
+                          className="mx-1 px-4 py-1 cursor-pointer"
+                        >
+                          <icon-mock />
+                        </li>
+                        <li
+                          className="mx-1 px-4 py-1 cursor-pointer"
+                        >
+                          <icon-mock />
+                        </li>
+                        <li
+                          className="mx-1 px-4 py-1 cursor-pointer"
+                        >
+                          <icon-mock />
+                        </li>
+                        <li
+                          className="mx-1 px-4 py-1 cursor-pointer"
+                        >
+                          <icon-mock />
+                        </li>
+                      </ul>
+                    </div>
+                  </footer>
+                </Footer>
+              </Layout>
+            </Homepage>
+          </Route>
+        </Switch>
+      </Router>
+    </BrowserRouter>
+  </App>
+</Provider>
+`;
+
+exports[`Application test should render without crashing 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Menu>
+      <ul
+        className="absolute right-0 top-0 mt-14 p-5  shadow-lg bg-white z-10 block text-left w-100 menu"
+      >
+        <li
+          className="p-3 whitespace-no-wrap text-sm md:text-base text-black-600 hover:text-gray-800 hover:bg-gray-100"
+        >
+          <Link
+            className="px-2 py-1"
+            to="/"
+          >
+            <a
+              className="px-2 py-1"
+              href="/"
+              onClick={[Function]}
+            >
+              <span>
+                Create Article
+              </span>
+            </a>
+          </Link>
+        </li>
+        <li
+          className="p-3 whitespace-no-wrap text-sm md:text-base text-black hover:text-gray-800 hover:bg-gray-100"
+        >
+          <Link
+            className="px-2 py-1"
+            to="/"
+          >
+            <a
+              className="px-2 py-1"
+              href="/"
+              onClick={[Function]}
+            >
+              <span>
+                My Profile
+              </span>
+            </a>
+          </Link>
+        </li>
+        <li
+          className="p-3 whitespace-no-wrap text-sm md:text-base text-black hover:text-gray-800 hover:bg-gray-100"
+        >
+          <Link
+            className="px-2 py-1"
+            to="/"
+          >
+            <a
+              className="px-2 py-1"
+              href="/"
+              onClick={[Function]}
+            >
+              <span>
+                Admin Management
+              </span>
+            </a>
+          </Link>
+        </li>
+        <li
+          className="p-3 whitespace-no-wrap text-sm md:text-base text-black  hover:text-gray-800 hover:bg-gray-100"
+        >
+          <Link
+            className="px-2 py-1"
+            to="/"
+          >
+            <a
+              className="px-2 py-1"
+              href="/"
+              onClick={[Function]}
+            >
+              <span>
+                Logout
+              </span>
+            </a>
+          </Link>
+        </li>
+      </ul>
+    </Menu>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Application test should render without crashing 2`] = `
+<Footer>
+  <footer
+    className="footer flex flex-wrap w-full justify-center px-10"
+  >
+    <div
+      className="md:w-1/2 h-8"
+    >
+      <p
+        className=" flex justify-start"
+      >
+        Designed by Kifaru Team
+      </p>
+    </div>
+    <div
+      className="md:w-1/2 h-8"
+    >
+      <ul
+        className="flex justify-end items-center"
+      >
+        <li
+          className="mx-1 px-2 py-1 cursor-pointer"
+        >
+          <icon-mock />
+        </li>
+        <li
+          className="mx-1 px-4 py-1 cursor-pointer"
+        >
+          <icon-mock />
+        </li>
+        <li
+          className="mx-1 px-4 py-1 cursor-pointer"
+        >
+          <icon-mock />
+        </li>
+        <li
+          className="mx-1 px-4 py-1 cursor-pointer"
+        >
+          <icon-mock />
+        </li>
+        <li
+          className="mx-1 px-4 py-1 cursor-pointer"
+        >
+          <icon-mock />
+        </li>
+      </ul>
+    </div>
+  </footer>
+</Footer>
+`;
+
+exports[`Application test should renders without crashing 1`] = `
+<cards>
+  <div
+    className="flex justify-center w-full md:hidden "
+  >
+    <div
+      className="max-w-sm flex items-center h-screen overflow-hidden w-full"
+    >
+      <div
+        className="flex justify-center items-center h-screen flex-col w-full"
+      >
+        <div
+          className="flex flex-col items-center"
+        >
+          <a
+            className="bg-teal-500  text-white text-center text-xs w-32  uppercase  py-3 px-5 "
+            href="/login"
+          >
+            LOGIN
+          </a>
+          <a
+            className="bg-white-500 mt-6  text-center border border-red-500  w-32 text-xs py-3 px-1 uppercase text-red-600"
+            href="/signup"
+          >
+            get started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</cards>
+`;
+
+exports[`Application test should work fine on Login Page 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <LoginPage>
+        <Layout>
+          <Connect(NavBar)>
+            <NavBar
+              dispatch={[Function]}
+              isLoggedIn={false}
+              user={Object {}}
+            >
+              <nav
+                className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
+              >
+                <div
+                  className="logo flex items-center"
+                >
+                  <Link
+                    aria-labelledby="Error Swag Logo"
+                    className="flex items-center"
+                    to="/"
+                  >
+                    <a
+                      aria-labelledby="Error Swag Logo"
+                      className="flex items-center"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Errorswag logo"
+                        className="sm:w-8/12 md:w-full"
+                        src={
+                          Object {
+                            "process": [Function],
+                          }
+                        }
+                      />
+                    </a>
+                  </Link>
+                </div>
+                <div
+                  className="flex"
+                >
+                  <Link
+                    aria-labelledby="Search"
+                    className="small-button"
+                    to="/search"
+                  >
+                    <a
+                      aria-labelledby="Search"
+                      className="small-button"
+                      href="/search"
+                      onClick={[Function]}
+                    >
+                      <icon-mock
+                        className="h-5 w-5"
+                      />
+                    </a>
+                  </Link>
+                  <Link
+                    aria-labelledby="Notifications"
+                    className="small-button"
+                    to="/notifications"
+                  >
+                    <a
+                      aria-labelledby="Notifications"
+                      className="small-button"
+                      href="/notifications"
+                      onClick={[Function]}
+                    >
+                      <icon-mock
+                        className="h-6 w-6"
+                      />
+                    </a>
+                  </Link>
+                  <AuthButtons
+                    id="auth-buttons"
+                    show={true}
+                  >
+                    <Link
+                      aria-labelledby="Login"
+                      className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                      to="/login"
+                    >
+                      <a
+                        aria-labelledby="Login"
+                        className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                        href="/login"
+                        onClick={[Function]}
+                      >
+                        LOGIN
+                      </a>
+                    </Link>
+                    <Link
+                      aria-labelledby="Signup"
+                      className="btn red-button py-3 px-8 sm:hidden md:block"
+                      to="/signup"
+                    >
+                      <a
+                        aria-labelledby="Signup"
+                        className="btn red-button py-3 px-8 sm:hidden md:block"
+                        href="/signup"
+                        onClick={[Function]}
+                      >
+                        GET STARTED
+                      </a>
+                    </Link>
+                  </AuthButtons>
+                  <MenuIcon
+                    id="menu"
+                    isLoggedIn={false}
+                    menuOpen={false}
+                    toggleMenu={[Function]}
+                  >
+                    <button
+                      aria-expanded={false}
+                      aria-label="Menu"
+                      className="hamburger small-button sm:block md:hidden"
+                      data-active={false}
+                      id="hamburger"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span />
+                    </button>
+                  </MenuIcon>
+                </div>
+              </nav>
+            </NavBar>
+          </Connect(NavBar)>
+          <Link
+            to="/login"
+          >
+            <a
+              href="/login"
+              onClick={[Function]}
+            >
+              Login
+            </a>
+          </Link>
+          <Footer>
+            <footer
+              className="footer flex flex-wrap w-full justify-center px-10"
+            >
+              <div
+                className="md:w-1/2 h-8"
+              >
+                <p
+                  className=" flex justify-start"
+                >
+                  Designed by Kifaru Team
+                </p>
+              </div>
+              <div
+                className="md:w-1/2 h-8"
+              >
+                <ul
+                  className="flex justify-end items-center"
+                >
+                  <li
+                    className="mx-1 px-2 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                  <li
+                    className="mx-1 px-4 py-1 cursor-pointer"
+                  >
+                    <icon-mock />
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </Footer>
+        </Layout>
+      </LoginPage>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

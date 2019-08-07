@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Roboto&display=swap');
+@import '../../../public/styles/colors.scss';
+
+.banner {
+  background-image: url("../../assets/images/article-image.png");
+  background-size: cover;
+}
+
+.banner-text {
+  font-family: Poppins, sans-serif;
+}
+
+.search-box::placeholder::before {
+  content: "\f002";
+}
+
+.banner-text{
+  color: $white;
+}
