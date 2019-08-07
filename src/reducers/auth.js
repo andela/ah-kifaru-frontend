@@ -1,6 +1,4 @@
-import actionTypes from '@actions/auth/actionTypes';
-
-const { LOGIN_SUCCESS } = actionTypes;
+import { LOGIN_SUCCESS } from '../actions/actionTypes';
 
 const initialState = {
   isLoginPending: true,
