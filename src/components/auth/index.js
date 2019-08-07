@@ -13,13 +13,12 @@ const cards = () => {
               LOGIN
             </a>
 
-            <a 
+            <a
               href="/signup"
               className="bg-white-500 mt-6  text-center border border-red-500  w-32 text-xs py-3 px-1 uppercase text-red-600"
             >
               get started
             </a>
-
           </div>
         </div>
       </div>
