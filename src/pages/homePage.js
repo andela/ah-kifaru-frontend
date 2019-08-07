@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '@components/common/Layout';
 import logo from '../assets/images/logo.png';
+import ArticleCard from '../components/ArticleCard/index';
 
 const Homepage = () => {
   return (
