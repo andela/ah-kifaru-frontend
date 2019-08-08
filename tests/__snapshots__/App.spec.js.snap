@@ -23,12 +23,14 @@ exports[`Application test should work fine Home Page 1`] = `
       Login
     </button>
   </Link>
+  <Footer />
 </div>
 `;
 
 exports[`Application test should work fine on App 1`] = `
 <BrowserRouter>
   <Routes />
+  <Footer />
 </BrowserRouter>
 `;
 

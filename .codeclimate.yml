@@ -17,6 +17,7 @@ ratings:
 exclude_paths:
   - "**/*_test.go"
   - "**/*spec.js"
+  - "**/src/assets/**"
   - "*_test.go"
   - "vendor/"
   
