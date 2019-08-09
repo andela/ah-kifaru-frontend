@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import Footer from '../components/Footer/Footer';
+import Menu from '../components/userMenu';
 
 const Homepage = () => {
   return (
@@ -19,6 +20,7 @@ const Homepage = () => {
         </button>
       </Link>
       <Footer />
+      <Menu />
     </div>
   );
 };

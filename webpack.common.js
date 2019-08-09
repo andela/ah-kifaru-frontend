@@ -53,10 +53,11 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss|sass)/i,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
           'postcss-loader'
         ]
       }
