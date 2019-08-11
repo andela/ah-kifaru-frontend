@@ -1,7 +1,4 @@
-import React from 'react';
-
-const instagram = () => (
-  <svg
+	  <svg
     width="15"
     height="15"
     viewBox="0 0 26 26"
@@ -13,6 +10,3 @@ const instagram = () => (
       fill="#313131"
     />
   </svg>
-);
-
-export default instagram;
