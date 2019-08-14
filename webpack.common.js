@@ -9,10 +9,12 @@ module.exports = {
     alias: {
       '@components': path.resolve(__dirname, 'src/components'),
       '@containers': path.resolve(__dirname, 'src/containers'),
-      '@modules': path.resolve(__dirname, 'src/store/modules'),
+      '@reducers': path.resolve(__dirname, 'src/reducers'),
+      '@actions': path.resolve(__dirname, 'src/actions'),
       '@pages': path.resolve(__dirname, 'src/pages'),
-      '@config': path.resolve(__dirname, 'src/config'),
-      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@config': path.resolve(__dirname, 'src/'),
+      '@fonts': path.resolve(__dirname, 'public/assets/fonts'),
+      '@images': path.resolve(__dirname, 'public/assets/images'),
       '@utils': path.resolve(__dirname, 'src/utils')
     }
   },
@@ -23,16 +25,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.(png|jpeg|jpg)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'imgs'
-          }
         }
       },
       {
@@ -49,6 +41,16 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|jpeg|jpg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'imgs'
+          }
+        }
       },
       {
         test: /\.(css|scss|sass)/i,
