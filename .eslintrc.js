@@ -22,7 +22,6 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
-    SharedArrayBuffer: 'readonly',
     shallow: true,
     mount: true,
     expect: true,

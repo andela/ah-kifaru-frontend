@@ -1,11 +1,17 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Homepage from '../pages/hompage';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LandingPage from '@pages/loginPage';
+import HomePage from '@pages/homePage';
+import NotFoundPage from '@pages/notFoundPage';
 
-const Routes = () => (
-  <Switch>
-    <Route path="/" exact component={Homepage} />
-  </Switch>
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/" exact component={HomePage} />
+      <Route path="/login" exact component={LandingPage} />
+      <Route path="/" component={NotFoundPage} />
+    </Switch>
+  </Router>
 );
 
-export default Routes;
+export default App;
