@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Roboto&display=swap');
+@import '../../../public/styles/colors.scss';
+
+.footer {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  border-top: 1px solid $light-grey;
+  @apply text-danger text-base font-bold py-10;
+}

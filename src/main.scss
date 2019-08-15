@@ -1,0 +1,40 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import '../public/styles/colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Roboto&display=swap');
+
+:root {
+  --font: 'Poppins', sans-serif;
+  --defaultColor: $black;
+  font-family: var(--font);
+  font-style: normal;
+  color: var(--defaultColor);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $page-bg-color;
+  font-weight: 400;
+}
+
+.btn-medium {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.red-button {
+  @extend .btn-medium;
+  border: 2px solid $danger;
+  color: $danger;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.article-body {
+  --font: Roboto;
+}

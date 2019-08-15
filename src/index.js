@@ -1,8 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App';
-import './index.css';
+import { Provider } from 'react-redux';
+import App from './routes/AppRouter';
+import store from './store';
+import './main.scss';
 
 const app = document.querySelector('#app');
 
-render(<App />, app);
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  app
+);
