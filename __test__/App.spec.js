@@ -1,6 +1,7 @@
 import React from 'react';
-import { createStore, combineReducers } from 'redux';
 import { BrowserRouter, Switch } from 'react-router-dom';
+import thunk from 'redux-thunk';
+import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import LoginPage from '@pages/loginPage';
 import HomePage from '@pages/homePage';
@@ -11,28 +12,17 @@ import Auth from '../src/components/auth';
 
 import App from '../src/routes/AppRouter';
 
-const auth = (state = {}, action) => {
-  switch (action.type) {
-    case 'LOGIN_SUCCESS':
-      return {
-        isLoginPending: false,
-        isAuthenticated: !action.user,
-        user: action.user
-      };
-    default:
-      return state;
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
+const store = mockStore({
+  authReducer: {
+    isAuthenticated: false,
+    user: {},
+    status: 'rest'
   }
-};
+});
 
 describe('Application test', () => {
-  let store;
-  beforeEach(() => {
-    store = createStore(
-      combineReducers({
-        auth
-      })
-    );
-  });
   it('should render index page', () => {
     const comp = (
       <Provider store={store}>
@@ -48,24 +38,32 @@ describe('Application test', () => {
     expect(wrapper.find('Home')).toBeTruthy();
   });
   it('should not crash app', () => {
-    const wrapper = mount(<App />);
+    const wrapper = mount(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
   it('should work fine on Login Page', () => {
     const wrapper = mount(
-      <BrowserRouter>
-        <LoginPage />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <LoginPage />
+        </BrowserRouter>
+      </Provider>
     );
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
   it('it should render Home Page without crashing', () => {
     const wrapper = mount(
-      <BrowserRouter>
-        <HomePage />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <HomePage />
+        </BrowserRouter>
+      </Provider>
     );
 
     expect(toJson(wrapper)).toMatchSnapshot();
@@ -82,16 +80,19 @@ describe('Application test', () => {
   });
 
   it('should render without crashing', () => {
-    const wrapper = mount(<Menu />);
+    const wrapper = mount(
+      <BrowserRouter>
+        <Menu />
+      </BrowserRouter>
+    );
 
     expect(toJson(wrapper)).toMatchSnapshot();
-    expect(wrapper.find('[href="/"]')).toHaveLength(4);
-    expect(wrapper.find('a').length).toBeGreaterThan(1);
+    expect(wrapper.find('Link').length).toBeGreaterThan(1);
     expect(wrapper.find('ul')).toHaveLength(1);
     expect(wrapper.find('li').length).toBeGreaterThan(1);
   });
   it('should render without crashing', () => {
-    const wrapper = shallow(<Footer />);
+    const wrapper = mount(<Footer />);
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });

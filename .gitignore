@@ -17,3 +17,4 @@ coverage
 
 #snapshots
 src/tests/__snapshots__
+__snapshots__

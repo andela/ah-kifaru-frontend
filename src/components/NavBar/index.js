@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { NotificationIcon, AvatarIcon, SearchIcon } from '../../assets/icons';
+import Dropdown from '../userMenu';
 import './NavBar.scss';
 import logo from '../../assets/images/logo.png';
 
@@ -45,6 +47,7 @@ const NavBar = ({ isLoggedIn, user }) => {
           menuOpen={menuOpen}
         />
       </div>
+      {menuOpen && <Dropdown />}
     </nav>
   );
 };
@@ -56,8 +59,16 @@ NavBar.defaultProps = {
 
 NavBar.propTypes = {
   isLoggedIn: PropTypes.bool,
-  user: PropTypes.objectOf(PropTypes.string)
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    username: PropTypes.string
+  })
 };
+
+const mapToProps = state => ({
+  isLoggedIn: state.authReducer.isAuthenticated,
+  user: state.authReducer.user
+});
 
 const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen }) => {
   return isLoggedIn ? (
@@ -66,6 +77,7 @@ const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen }) => {
       className="avatar flex items-center mx-2 focus:outline-none"
       type="button"
       aria-label="Menu"
+      onClick={toggleMenu}
     >
       <AvatarIcon className="w-8 h-8" />
     </button>
@@ -116,4 +128,7 @@ AuthButtons.propTypes = {
   show: PropTypes.bool.isRequired
 };
 
-export default NavBar;
+export default connect(
+  mapToProps,
+  null
+)(NavBar);
