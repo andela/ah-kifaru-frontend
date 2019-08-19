@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
-    port: 3000
+    port: 5000
   },
   output: {
     filename: '[name].bundle.js',

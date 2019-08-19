@@ -1,0 +1,21 @@
+.social {
+  max-height: 200px;
+  min-height: 4rem;
+}
+
+.social a{
+  /* width: 70%; */
+  min-width: 3rem;
+  max-width: 7rem;
+}
+
+a:focus, a:active{
+  opacity: 0.5;
+}
+
+@media(min-width:425px){
+  .social a{
+    min-width: 10rem;
+    margin-bottom: 3%;
+  }
+}
