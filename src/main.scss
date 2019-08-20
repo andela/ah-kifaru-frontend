@@ -37,4 +37,30 @@ body {
 
 .article-body {
   --font: Roboto;
+  font-family: var(--font);
+  font-size: 1.1rem;
+  word-spacing: 3px;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.article-desc {
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.article-title {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  @apply my-12;
+  @screen md {
+    grid-template-columns: 17rem 1fr 17rem;
+  }
+  @screen md {
+    @apply mx-5;
+  }
 }

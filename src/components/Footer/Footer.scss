@@ -3,9 +3,10 @@
 
 .footer {
   font-family: 'Poppins', sans-serif;
-  position: fixed;
+  position: relative;
   left: 0px;
   bottom: 0px;
   border-top: 1px solid $light-grey;
-  @apply text-danger text-base font-bold py-10;
+  background: $white;
+  @apply mt-24 text-danger text-base font-bold py-10;
 }
