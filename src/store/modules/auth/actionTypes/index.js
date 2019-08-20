@@ -1,3 +1,5 @@
 export const AUTH_PENDING = 'AUTH_PENDING';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAILURE = 'AUTH_FAILURE';
+export const REQUIRE_LOGIN = 'REQUIRE_LOGIN';
+export const GET_FOLLOWERS = 'GET_FOLLOWERS';

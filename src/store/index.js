@@ -3,10 +3,11 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import rootReducer from './modules';
 import getUserInfo from '../utils/getUserFromToken';
+import { requireLoginMiddleware } from './middlewares'
 
 const loggerMiddleware = createLogger();
 const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const middlewares = [thunkMiddleware];
+const middlewares = [thunkMiddleware, requireLoginMiddleware];
 
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(loggerMiddleware);

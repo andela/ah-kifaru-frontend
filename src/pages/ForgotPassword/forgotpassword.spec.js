@@ -110,10 +110,10 @@ describe('Test forgot password page', () => {
       persist: () => {},
       target: {
         name: 'email',
-        value: 'tejumoladavid@gmail.com'
+        value: 'tejumoladavid@example.com'
       }
     });
-    expect(passwordInput.html()).toMatch('tejumoladavid@gmail.com');
+    expect(passwordInput.html()).toMatch('tejumoladavid@example.com');
   });
 
   test('should submit a valid form', async () => {
@@ -121,7 +121,7 @@ describe('Test forgot password page', () => {
 
     const emailInputElement = getByTestId('email');
     fireEvent.change(emailInputElement, {
-      target: { value: 'tejumoladavid@gmail.com' }
+      target: { value: 'tejumoladavid@example.com' }
     });
     fireEvent.blur(emailInputElement);
 

@@ -1,4 +1,5 @@
 import jwtDecode from 'jwt-decode';
+import moment from 'moment';
 
 export const calculateReadTime = content => {
   const wordsPerMinute = 200;
@@ -29,3 +30,11 @@ export const decodeToken = ({ history }) => {
   }
   return history && history.push('/login');
 };
+
+export const prettifyDate = dataInString => {
+  return moment(dataInString).format('D, MMMM YYYY');
+};
+
+export const isFollower = ()=>{
+  
+}

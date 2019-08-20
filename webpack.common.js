@@ -25,7 +25,7 @@ module.exports = {
     new Dotenv(),
     new webpack.DefinePlugin({
       'process.env': {
-        API_BASE_URL: JSON.stringify(process.env.API_BASE_URL)
+        API_BASE_URL: 'https://errorswag-staging.herokuapp.com/api/v1'
       }
     })
   ],

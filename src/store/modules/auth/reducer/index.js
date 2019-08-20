@@ -1,7 +1,7 @@
-import { AUTH_PENDING, AUTH_SUCCESS, AUTH_FAILURE } from '../actionTypes';
+import { AUTH_PENDING, AUTH_SUCCESS, AUTH_FAILURE, GET_FOLLOWERS } from '../actionTypes';
 import initialState from '../index';
 
-const authTypes = [AUTH_PENDING, AUTH_FAILURE, AUTH_SUCCESS];
+const authTypes = [AUTH_PENDING, AUTH_FAILURE, AUTH_SUCCESS, GET_FOLLOWERS];
 const authReducer = (state = initialState, { type, payload }) => {
   return authTypes.includes(type) ? { ...state, ...payload } : state;
 };

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @import '../public/styles/colors.scss';
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Montserrat:400,500,700,900&display=swap');
 
 :root {
   --font: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: $page-bg-color;
+  background-color: rgba(0, 0, 0, 0.012);
   font-weight: 400;
 }
 
@@ -46,13 +46,14 @@ body {
 
 .label {
   @apply block w-full mt-3 text-sm;
+
   input {
     margin-top: 0.8rem;
   }
 }
 
 .auth-input {
-  @apply appearance-none block  w-full rounded py-4 px-6 mb-3;
+  @apply appearance-none block w-full rounded py-4 px-6 mb-3;
   background-color: $light-grey;
 }
 
@@ -72,5 +73,199 @@ body {
 }
 
 .article-body {
-  --font: Roboto;
+  --font: 'Montserrat', sans-serif;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  word-spacing: 3px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.article-desc {
+  color: rgba(0, 0, 0, 0.74);
+  @apply mx-6;
+  font-size: 1rem;
+
+
+  @screen md {
+    @apply mx-0;
+    font-size: 1.1rem;
+  }
+}
+
+.article-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  @apply mx-6;
+
+  @screen md {
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+    @apply mx-0;
+  }
+}
+
+.articleTime {
+  @apply flex items-center my-6 mx-6;
+  font-size: 0.9rem;
+
+  @screen md {
+    @apply mx-0;
+    font-size: 1.1rem;
+  }
+
+  span {
+    width: 1rem;
+    height: 1rem;
+    background-color: $black;
+    border-radius: 50%;
+    @apply w-2 h-2 mx-3 flex;
+  }
+}
+
+.l-content {
+  position: fixed;
+  width: 20rem;
+  left: 0;
+}
+
+.r-content {
+  position: fixed;
+  width: 20rem;
+  right: 0;
+}
+
+.maincontent {
+  @screen md {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}
+
+.article-layout {
+  display: flex;
+  justify-content: flex-start;
+  @apply my-12;
+
+  @screen md {
+    @apply mx-5;
+  }
+}
+
+.tagslist {
+  @apply flex flex-row flex-wrap my-5 mx-5;
+
+  .tag {
+    background-color: $light-grey;
+    color: $black;
+    font-weight: 900;
+    text-transform: uppercase;
+    @apply mr-4 px-6 py-4 text-xs mt-4 rounded;
+  }
+
+  @screen md {
+    @apply flex flex-row flex-wrap my-5 mx-0;
+  }
+}
+
+
+.body {
+  font-weight: 400;
+  word-break: break-word;
+  text-rendering: optimizeLegibility;
+  @apply mx-6;
+
+  @screen md {
+    @apply mx-0;
+  }
+}
+
+.ce-block__content {
+  margin: 0 !important;
+}
+
+.cdx-block,
+.ce--block {
+  padding: .65em 0;
+}
+
+.ce-paragraph {
+  line-height: 1.6em;
+  font-weight: 400;
+  outline: none;
+  font-size: 18px;
+
+  p {
+    line-height: 1.6em;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  code {
+    font-size: inherit;
+  }
+}
+
+.body {
+  ul {
+    list-style: disc !important;
+
+    margin-left: 2rem !important;
+
+    @screen md {
+      margin-left: 4rem !important;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 900;
+    font-size: 1.4em;
+    line-height: 0.6em;
+    margin-bottom: -0.4rem;
+  }
+}
+
+.ce-code {
+  background-color: #1e2128;
+  padding: 2rem;
+  color: #9ca3b3;
+  font-size: 0.8em;
+}
+
+.ce-rawtool {
+  border-radius: 5px;
+  background-color: #1e2128;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: -0.2px;
+  color: #9ca3b3;
+}
+
+.ce-delimiter:before {
+  display: inline-block;
+  content: "***";
+  font-size: 30px;
+  line-height: 65px;
+  height: 30px;
+  letter-spacing: 0.2em;
+}
+
+
+.ce-paragraph {
+  @screen sm {
+    font-size: 16px;
+  }
+
+  @screen md {
+    font-size: 17px;
+  }
 }
