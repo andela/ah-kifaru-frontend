@@ -25,12 +25,7 @@ class CommentsCard extends Component {
   }
 
   componentDidMount() {
-    const {
-      getComment,
-      match: {
-        params: { articleId }
-      }
-    } = this.props;
+    const { getComment, articleId } = this.props;
     getComment(articleId);
   }
 
@@ -40,12 +35,7 @@ class CommentsCard extends Component {
 
   handleCommentSubmit(e) {
     e.preventDefault();
-    const {
-      match: {
-        params: { articleId }
-      },
-      postComment
-    } = this.props;
+    const { articleId, postComment } = this.props;
     const { content } = this.state;
 
     const errors = {};
@@ -114,11 +104,7 @@ CommentsCard.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   comments: PropTypes.array.isRequired,
   postComment: PropTypes.func.isRequired,
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      articleId: PropTypes.number
-    }).isRequired
-  }).isRequired
+  articleId: PropTypes.number.isRequired
 };
 const mapStateToProps = state => ({
   comments: state.commentReducer.comments,

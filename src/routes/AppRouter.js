@@ -7,7 +7,7 @@ import PasswordResetPage from '@pages/ResetPassword';
 import RequestPasswordResetPage from '@pages/ForgotPassword';
 import ArticlesPage from '@pages/LandingPage/index';
 import Editor from '@pages/Article/NewArticle';
-import CommentsCard from '../components/Comments';
+import SingleArticlePage from '@pages/SingleArticle';
 import PrivateRoute from './PrivateRoute';
 
 const App = () => (
@@ -16,6 +16,7 @@ const App = () => (
       <Route path="/signup" component={SignUpPage} />
       <Route path="/login" exact component={LoginPage} />
       <Route path="/" exact component={ArticlesPage} />
+      <Route exact path="/article/:articleId" component={SingleArticlePage} />
       <Route
         path="/reset-password/:token"
         exact
@@ -27,7 +28,7 @@ const App = () => (
         component={RequestPasswordResetPage}
       />
       <PrivateRoute path="/new-article" exact component={Editor} />
-      <Route path="/articles/:articleId" exact component={CommentsCard} />
+      <Route exact path="/" component={ArticlesPage} />
       <Route component={NotFoundPage} />
     </Switch>
   </Router>

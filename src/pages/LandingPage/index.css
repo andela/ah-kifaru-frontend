@@ -12,5 +12,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.header-card {
+  height: 25rem;
 }
