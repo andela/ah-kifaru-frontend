@@ -3,6 +3,8 @@ node_modules
 dist
 .DS_Store
 examples
+yarn-error.log
+yarn.lock
 
 #cypress
 cypress/fixtures
