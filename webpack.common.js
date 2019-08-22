@@ -1,5 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 const Dotenv = require('dotenv-webpack');
+
+dotenv.config();
 
 module.exports = {
   entry: {
@@ -17,7 +21,14 @@ module.exports = {
       '@utils': path.resolve(__dirname, 'src/utils')
     }
   },
-  plugins: [new Dotenv()],
+  plugins: [
+    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        API_BASE_URL: JSON.stringify(process.env.API_BASE_URL)
+      }
+    })
+  ],
   module: {
     rules: [
       {

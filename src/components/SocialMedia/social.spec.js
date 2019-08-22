@@ -46,6 +46,7 @@ describe('SocialMediaLogin', () => {
   it('should redirect to the home page if the url was not provided', () => {
     delete location.url;
     store = createStore(true);
+    localStorage.setItem('token', userToken);
     wrapper = mount(
       <Provider store={store}>
         <Router>

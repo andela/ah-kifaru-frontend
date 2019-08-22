@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as Toastr from 'toastr';
 import { saveToLocalStorage, decodeToken } from '../../../../utils';
 import { AUTH_PENDING, AUTH_SUCCESS, AUTH_FAILURE } from '../actionTypes';
+import config from '../../../../config';
 
 export const authPending = () => ({
   type: AUTH_PENDING,
@@ -33,24 +34,38 @@ export const authFailure = error => ({
   }
 });
 
-export const authAction = (userData, history, url = '') => async dispatch => {
+export const authAction = ({
+  userData,
+  history,
+  url = undefined
+}) => async dispatch => {
+  const { username = undefined, email, password } = userData;
   dispatch(authPending());
   try {
+    const authRoute = username ? 'signup' : 'login';
+
+    const details = username
+      ? { username, email, password }
+      : { username, password };
+
     const response = await axios({
       method: 'post',
-      baseURL: `${process.env.apiUrl}/auth/login`,
-      data: userData
+      url: `${process.env.apiUrl}/auth/${authRoute}`,
+      data: details
     });
     const { token } = response.data.data;
-    saveToLocalStorage({ token, url });
-    const user = decodeToken({ history });
 
-    Toastr.success('Welcome to ErrorSwag');
+    saveToLocalStorage({ token, url });
+
+    const user = decodeToken({ history });
+    Toastr.success('Welcome to ErrorSwag!');
     dispatch(authSuccess(user));
 
-    return url ? history.push(url) : history.push();
+    return url ? history.push(url) : history.push('/');
   } catch (error) {
-    const { message } = error.response.data;
+    const message = error.response
+      ? error.response.data.message
+      : `${error.message}. It appears you're offline`;
     Toastr.error(message);
     dispatch(authFailure(message));
   }

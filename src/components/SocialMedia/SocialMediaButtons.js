@@ -8,14 +8,14 @@ const GITHUB_LOGIN = `${process.env.API_BASE_URL}/auth/github`;
 const FACEBOOK_LOGIN = `${process.env.API_BASE_URL}/auth/facebook`;
 const GOOGLE_LOGIN = `${process.env.API_BASE_URL}/auth/google`;
 const SocialMedia = () => (
-  <div className="social flex flex-col items-center justify-around w-3/5 m-auto">
-    <a href={GITHUB_LOGIN} className="w-3/4">
+  <div className="flex flex-col justify-center items-center">
+    <a href={GITHUB_LOGIN} className="mb-2">
       <Github />
     </a>
-    <a href={FACEBOOK_LOGIN} className="w-3/4">
+    <a href={FACEBOOK_LOGIN} className="mb-2">
       <Facebook />
     </a>
-    <a href={GOOGLE_LOGIN} className="w-3/4">
+    <a href={GOOGLE_LOGIN} className="mb-2">
       <Google />
     </a>
   </div>

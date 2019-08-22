@@ -68,6 +68,11 @@ describe('Action tests', () => {
     expect(dispatch).toBeCalledWith(expected);
   });
   it('creates AUTH_SUCCESS, AUTH_PENDING when login is successful', () => {
+    const userData = {
+      email: 'email@email.com',
+      password: 'Password',
+      username: 'usernam'
+    };
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
@@ -96,9 +101,11 @@ describe('Action tests', () => {
       }
     ];
 
-    return store.dispatch(actions.authAction({}, history, '/')).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store
+      .dispatch(actions.authAction({ userData, history, url: '/' }))
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+      });
   });
 
   it('creates AUTH_SUCCESS, AUTH_PENDING when login is successful even when hisory and url is not passed', () => {
@@ -109,6 +116,11 @@ describe('Action tests', () => {
         response: authResponse
       });
     });
+    const userData = {
+      email: 'email@email.com',
+      password: 'Password',
+      username: 'usernam'
+    };
     const expectedActions = [
       {
         type: AUTH_PENDING,
@@ -130,9 +142,11 @@ describe('Action tests', () => {
       }
     ];
 
-    return store.dispatch(actions.authAction({}, history, '')).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store
+      .dispatch(actions.authAction({ userData, history, url: '' }))
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+      });
   });
 
   it('creates AUTH_FAILURE on login failure', () => {
@@ -143,6 +157,12 @@ describe('Action tests', () => {
         response: authResponse
       });
     });
+
+    const userData = {
+      email: 'email@email.com',
+      password: 'Password',
+      username: 'usernam'
+    };
     const expectedActions = [
       {
         type: AUTH_PENDING,
@@ -163,8 +183,10 @@ describe('Action tests', () => {
         }
       }
     ];
-    return store.dispatch(actions.authAction({}, history)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store
+      .dispatch(actions.authAction({ userData, history }))
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+      });
   });
 });
