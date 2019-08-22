@@ -225,6 +225,37 @@ exports[`Application test it should render Home Page without crashing 1`] = `
               </nav>
             </NavBar>
           </Connect(NavBar)>
+          <Banner>
+            <header
+              className="banner flex justify-center w-full py-8 md:py-16 md:py-8 mb-3 md:mb-6"
+            >
+              <div
+                className="flex flex-col justify-center items-center md:w-6/12"
+              >
+                <h1
+                  className="banner-text font-bold md:text-4xl sm:text-xl text-white text-center leading-tight mb-6 px-4"
+                >
+                  Your ideas and thoughts are
+                   
+                  <br />
+                   
+                  worth sharing.
+                </h1>
+                <div
+                  className="flex bg-white md:w-10/12 sm:px-4 py-2 rounded md:text-sm sm:text-xs w-11/12"
+                >
+                  <icon-mock
+                    width="20"
+                  />
+                  <input
+                    className="search-box w-full px-4 outline-none"
+                    placeholder="Search by authors, interests, title"
+                    type="search"
+                  />
+                </div>
+              </div>
+            </header>
+          </Banner>
           <ArticleCard
             author="Mark"
             authorImage="author-image"
@@ -236,8 +267,864 @@ exports[`Application test it should render Home Page without crashing 1`] = `
             title="Pointing towards a good test boosts engineers' confidence"
           >
             <main
-              className="main flex items-center overflow-y-auto"
+              className="main flex justify-center items-center overflow-y-auto pb-6"
             >
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card flex md:flex-col mt-2 mb-2"
+              >
+                <Link
+                  className="flex w-2/6 md:w-full"
+                  to="/articles/:id"
+                >
+                  <a
+                    className="flex w-2/6 md:w-full"
+                    href="/articles/:id"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="author"
+                      className="article-image"
+                      src={
+                        Object {
+                          "process": [Function],
+                        }
+                      }
+                    />
+                  </a>
+                </Link>
+                <div
+                  className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                >
+                  <Link
+                    to="/articles/:id"
+                  >
+                    <a
+                      href="/articles/:id"
+                      onClick={[Function]}
+                    >
+                      <h1
+                        className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                      >
+                        Pointing towards a good test boosts engineers' confidence
+                      </h1>
+                      <p
+                        className="description-body small-text text-overflow mb-1"
+                      >
+                        Things are going to be fine. All you need to do is stay focused and believe in yourself
+                      </p>
+                    </a>
+                  </Link>
+                  <div
+                    className="flex text-xs items-center cursor-pointer"
+                  >
+                    <Link
+                      className="flex w-5/6 items-center"
+                      to="user/profile"
+                    >
+                      <a
+                        className="flex w-5/6 items-center"
+                        href="/user/profile"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="author"
+                          className="author-image h-8 w-8"
+                          src={
+                            Object {
+                              "process": [Function],
+                            }
+                          }
+                        />
+                        <div
+                          className="flex flex-col justify-center ml-2"
+                        >
+                          <p
+                            className="author-name"
+                          >
+                            Mark
+                          </p>
+                          <p
+                            className="small-text"
+                          >
+                            <span
+                              className="create-date"
+                            >
+                              June 25
+                            </span>
+                               
+                            <span
+                              className="dotSeparator"
+                            />
+                               
+                            <span
+                              className="read-time"
+                            >
+                              2 mins read
+                            </span>
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                    <button
+                      className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                      type="button"
+                    >
+                      <icon-mock
+                        className="not-bookmarked"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div
                 className="card flex md:flex-col mt-2 mb-2"
               >
@@ -625,6 +1512,37 @@ exports[`Application test should not crash app 1`] = `
                     </nav>
                   </NavBar>
                 </Connect(NavBar)>
+                <Banner>
+                  <header
+                    className="banner flex justify-center w-full py-8 md:py-16 md:py-8 mb-3 md:mb-6"
+                  >
+                    <div
+                      className="flex flex-col justify-center items-center md:w-6/12"
+                    >
+                      <h1
+                        className="banner-text font-bold md:text-4xl sm:text-xl text-white text-center leading-tight mb-6 px-4"
+                      >
+                        Your ideas and thoughts are
+                         
+                        <br />
+                         
+                        worth sharing.
+                      </h1>
+                      <div
+                        className="flex bg-white md:w-10/12 sm:px-4 py-2 rounded md:text-sm sm:text-xs w-11/12"
+                      >
+                        <icon-mock
+                          width="20"
+                        />
+                        <input
+                          className="search-box w-full px-4 outline-none"
+                          placeholder="Search by authors, interests, title"
+                          type="search"
+                        />
+                      </div>
+                    </div>
+                  </header>
+                </Banner>
                 <ArticleCard
                   author="Mark"
                   authorImage="author-image"
@@ -636,8 +1554,864 @@ exports[`Application test should not crash app 1`] = `
                   title="Pointing towards a good test boosts engineers' confidence"
                 >
                   <main
-                    className="main flex items-center overflow-y-auto"
+                    className="main flex justify-center items-center overflow-y-auto pb-6"
                   >
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="card flex md:flex-col mt-2 mb-2"
+                    >
+                      <Link
+                        className="flex w-2/6 md:w-full"
+                        to="/articles/:id"
+                      >
+                        <a
+                          className="flex w-2/6 md:w-full"
+                          href="/articles/:id"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="author"
+                            className="article-image"
+                            src={
+                              Object {
+                                "process": [Function],
+                              }
+                            }
+                          />
+                        </a>
+                      </Link>
+                      <div
+                        className="w-4/6 pl-3 pr-1 md:p-2 md:w-full"
+                      >
+                        <Link
+                          to="/articles/:id"
+                        >
+                          <a
+                            href="/articles/:id"
+                            onClick={[Function]}
+                          >
+                            <h1
+                              className="text-xs text-overflow-one-line font-bold mb-1 leading-tight"
+                            >
+                              Pointing towards a good test boosts engineers' confidence
+                            </h1>
+                            <p
+                              className="description-body small-text text-overflow mb-1"
+                            >
+                              Things are going to be fine. All you need to do is stay focused and believe in yourself
+                            </p>
+                          </a>
+                        </Link>
+                        <div
+                          className="flex text-xs items-center cursor-pointer"
+                        >
+                          <Link
+                            className="flex w-5/6 items-center"
+                            to="user/profile"
+                          >
+                            <a
+                              className="flex w-5/6 items-center"
+                              href="/user/profile"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="author"
+                                className="author-image h-8 w-8"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
+                                }
+                              />
+                              <div
+                                className="flex flex-col justify-center ml-2"
+                              >
+                                <p
+                                  className="author-name"
+                                >
+                                  Mark
+                                </p>
+                                <p
+                                  className="small-text"
+                                >
+                                  <span
+                                    className="create-date"
+                                  >
+                                    June 25
+                                  </span>
+                                     
+                                  <span
+                                    className="dotSeparator"
+                                  />
+                                     
+                                  <span
+                                    className="read-time"
+                                  >
+                                    2 mins read
+                                  </span>
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
+                          <button
+                            className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
+                            type="button"
+                          >
+                            <icon-mock
+                              className="not-bookmarked"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                     <div
                       className="card flex md:flex-col mt-2 mb-2"
                     >

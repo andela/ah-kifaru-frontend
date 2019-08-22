@@ -2,8 +2,10 @@
 @import '../../../public/styles/colors.scss';
 
 .banner {
-  background-image: url("../../assets/images/article-image.png");
+  background-image: url("../../assets/images/background.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .banner-text {
