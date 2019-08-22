@@ -3,11 +3,15 @@ node_modules
 dist
 .DS_Store
 examples
+yarn-error.log
+yarn.lock
+env
 
 #cypress
 cypress/fixtures
 cypress/plugins
 cypress/support
+src/.DS_Store
 
 #coverage
 coverage

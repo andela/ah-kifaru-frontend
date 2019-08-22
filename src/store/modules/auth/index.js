@@ -1,4 +1,4 @@
-const auth = {
+export const auth = {
   error: null,
   isAuthenticated: false,
   user: {},

@@ -11,7 +11,7 @@ export const calculateReadTime = content => {
   return 'less than a min read';
 };
 
-export const saveToLocalStorage = (token, url) => {
+export const saveToLocalStorage = ({ token, url }) => {
   if (token) {
     localStorage.setItem('token', token);
   }
