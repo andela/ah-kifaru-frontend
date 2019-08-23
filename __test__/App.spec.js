@@ -64,7 +64,7 @@ describe('Application test', () => {
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
-  
+
   it('it should render Home Page without crashing', () => {
     const wrapper = mount(
       <Provider store={store}>
