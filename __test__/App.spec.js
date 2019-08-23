@@ -95,7 +95,7 @@ describe('Application test', () => {
     );
 
     expect(toJson(wrapper)).toMatchSnapshot();
-    expect(wrapper.find('[to="/"]')).toHaveLength(4);
+    expect(wrapper.find('[to="/"]')).toHaveLength(3);
     expect(wrapper.find('Link').length).toBeGreaterThan(1);
     expect(wrapper.find('ul')).toHaveLength(1);
     expect(wrapper.find('li').length).toBeGreaterThan(1);
