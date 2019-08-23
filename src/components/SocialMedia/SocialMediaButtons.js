@@ -4,7 +4,7 @@ import Google from '../icons/google_btn.svg';
 import Github from '../icons/login_github.svg';
 import './social.css';
 
-const GITHUB_LOGIN = `http://localhost:3000/api/v1/auth/github`;
+const GITHUB_LOGIN = `https://errorswag-staging.herokuapp.com/api/v1/auth/github`;
 const FACEBOOK_LOGIN = `${process.env.API_BASE_URL}/auth/facebook`;
 const GOOGLE_LOGIN = `https://errorswag-staging.herokuapp.com/api/v1/auth/google`;
 const SocialMedia = () => (
