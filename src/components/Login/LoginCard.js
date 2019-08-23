@@ -8,7 +8,11 @@ const LoginCard = ({ children }) => {
         <div className="flex md:h-full sm:h-full">
           <div className="md:flex auth-bg sm:w-1/2 overflow-hidden w-full hidden rounded-l">
             <h1 className="flex px-5 items-center text-left text-white text-2xl font-bold">
-              Welcome back, <br /> Sign in to share, recommend and bookmark.
+              Welcome back, 
+              {' '}
+              <br />
+              {' '}
+Sign in to share, recommend and bookmark.
             </h1>
           </div>
           {children}
