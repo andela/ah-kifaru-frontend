@@ -2,7 +2,6 @@ import axios from 'axios';
 import * as Toastr from 'toastr';
 import { saveToLocalStorage, decodeToken } from '../../../../utils';
 import { AUTH_PENDING, AUTH_SUCCESS, AUTH_FAILURE } from '../actionTypes';
-import config from '../../../../config';
 
 export const authPending = () => ({
   type: AUTH_PENDING,
@@ -50,7 +49,7 @@ export const authAction = ({
 
     const response = await axios({
       method: 'post',
-      url: `${process.env.apiUrl}/auth/${authRoute}`,
+      url: `${process.env.API_BASE_URL}/auth/${authRoute}`,
       data: details
     });
     const { token } = response.data.data;
