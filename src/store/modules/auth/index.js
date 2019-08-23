@@ -4,5 +4,4 @@ export const auth = {
   user: {},
   status: 'rest'
 };
-
 export default auth;

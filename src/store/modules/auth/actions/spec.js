@@ -102,7 +102,13 @@ describe('Action tests', () => {
     ];
 
     return store
-      .dispatch(actions.authAction({ userData, history, url: '/' }))
+      .dispatch(
+        actions.authAction({
+          userData: { email: '', password: '' },
+          history,
+          url: '/'
+        })
+      )
       .then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       });
@@ -143,7 +149,13 @@ describe('Action tests', () => {
     ];
 
     return store
-      .dispatch(actions.authAction({ userData, history, url: '' }))
+      .dispatch(
+        actions.authAction({
+          userData: { email: '', password: '' },
+          history,
+          url: ''
+        })
+      )
       .then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       });
@@ -184,7 +196,9 @@ describe('Action tests', () => {
       }
     ];
     return store
-      .dispatch(actions.authAction({ userData, history }))
+      .dispatch(
+        actions.authAction({ userData: { email: '', password: '' }, history })
+      )
       .then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       });
