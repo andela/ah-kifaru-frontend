@@ -999,7 +999,7 @@ exports[`Application test should work fine on Login Page 1`] = `
                             >
                               <a
                                 className="mb-2"
-                                href="http://localhost:3000/api/v1/auth/github"
+                                href="https://errorswag-staging.herokuapp.com/api/v1/auth/github"
                               >
                                 <icon-mock />
                               </a>
