@@ -5,12 +5,15 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    historyApiFallback: true,
-    port: 5000
+    historyApiFallback: {
+      disableDotRule: true
+    },
+    port: 3000
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({

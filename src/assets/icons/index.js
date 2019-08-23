@@ -7,6 +7,7 @@ import InstagramIcon from './instagram.svg';
 import LinkedInIcon from './linkedin.svg';
 import YoutubeIcon from './youtube.svg';
 import TwitterIcon from './twitter.svg';
+import SuccessIcon from './success.svg';
 
 export {
   SearchIcon,
@@ -17,5 +18,6 @@ export {
   InstagramIcon,
   LinkedInIcon,
   YoutubeIcon,
-  TwitterIcon
+  TwitterIcon,
+  SuccessIcon
 };
