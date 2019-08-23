@@ -1,5 +1,6 @@
 import React from 'react';
 import SyncLoader from 'react-spinners/SyncLoader';
+import { Link } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import { css } from '@emotion/core';
 
@@ -125,12 +126,14 @@ export const SignupFormComponent = ({ signUp, history, status, location }) => (
             </button>
 
             <div className="w-100 text-center mb-2">
-              <button
-                type="submit"
-                className="mt-2 w-auto p-2 self-center button hover:text-indigo-700 text-center text-sm"
-              >
-                Forgot Password?
-              </button>
+              <Link to="/forgot-password">
+                <button
+                  type="submit"
+                  className="mt-2 w-auto p-2 self-center button hover:text-indigo-700 text-center text-sm"
+                >
+                  Forgot Password?
+                </button>
+              </Link>
             </div>
           </div>
         </Form>
