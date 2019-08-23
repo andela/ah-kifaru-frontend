@@ -10,7 +10,7 @@ import SocialMediaLogin from '../../components/SocialMedia/SocialMediaLogin';
 export const SignupForm = ({ status, signUp, history, location }) => (
   <div className="w-11/12 md:w-9/12 lg:w-7/12 mx-auto m-16 rounded-lg flex items-stretch bg-red-400 h-100">
     <div className="md:flex max-w-lg w-7/12 bg-color height items-center signup-card hidden rounded-l-lg ">
-      <div className=" pl-8 font-bold text-left text-white text-2xl">
+      <div className=" pl-8 font-bold text-left text-white text-3xl">
         <h2>Welcome to ErrorSwag,</h2>
         <h1>Signup to share,</h1>
         <h2>recommend and bookmark</h2>

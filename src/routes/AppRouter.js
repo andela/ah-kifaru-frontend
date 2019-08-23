@@ -6,6 +6,7 @@ import NotFoundPage from '@pages/notFoundPage';
 import SignUpPage from '@pages/Signup/index';
 import PasswordResetPage from '@pages/ResetPassword';
 import RequestPasswordResetPage from '@pages/ForgotPassword';
+import Editor from '@components/Article/NewArticle';
 
 const App = () => (
   <Router>
@@ -23,6 +24,7 @@ const App = () => (
         exact
         component={RequestPasswordResetPage}
       />
+      <Route path="/newArticle" exact component={Editor} />
       <Route component={NotFoundPage} />
     </Switch>
   </Router>

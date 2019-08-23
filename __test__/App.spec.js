@@ -64,7 +64,7 @@ describe('Application test', () => {
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
-  
+
   it('it should render Home Page without crashing', () => {
     const wrapper = mount(
       <Provider store={store}>
@@ -95,14 +95,17 @@ describe('Application test', () => {
     );
 
     expect(toJson(wrapper)).toMatchSnapshot();
-    expect(wrapper.find('[to="/"]')).toHaveLength(4);
     expect(wrapper.find('Link').length).toBeGreaterThan(1);
     expect(wrapper.find('ul')).toHaveLength(1);
     expect(wrapper.find('li').length).toBeGreaterThan(1);
   });
 
   it('should renders without crashing', () => {
-    const wrapper = mount(<Auth />);
+    const wrapper = mount(
+      <BrowserRouter>
+        <Auth />
+      </BrowserRouter>
+    );
     expect(toJson(wrapper)).toMatchSnapshot();
     expect(wrapper.find('a').length).toBeGreaterThan(1);
     expect(wrapper.find('a')).toHaveLength(2);
