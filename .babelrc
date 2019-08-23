@@ -12,6 +12,7 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
+    "emotion",
     [
       "module-resolver",
       {

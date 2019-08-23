@@ -18,7 +18,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:cypress/recommended'
   ],
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'prettier', 'emotion'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -26,7 +26,8 @@ module.exports = {
     mount: true,
     expect: true,
     render: true,
-    toJson: true
+    toJson: true,
+    moxios: true
   },
   parserOptions: {
     ecmaFeatures: {

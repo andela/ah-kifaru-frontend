@@ -22,6 +22,10 @@ body {
   font-weight: 400;
 }
 
+.content {
+  height: calc(100vh - 10rem);
+}
+
 .btn-medium {
   font-size: 0.85rem;
   font-weight: 600;
@@ -33,6 +37,38 @@ body {
   color: $danger;
   border-radius: 5px;
   box-sizing: border-box;
+}
+
+.primary-button {
+  @extend .btn-medium;
+  @apply text-white bg-primary py-4 px-10 font-medium rounded;
+}
+
+.label {
+  @apply block w-full mt-3 text-sm;
+  input {
+    margin-top: 0.8rem;
+  }
+}
+
+.auth-input {
+  @apply appearance-none block  w-full rounded py-4 px-6 mb-3;
+  background-color: $light-grey;
+}
+
+::placeholder {
+  color: #f1f1f1;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #f1f1f1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #f1f1f1;
 }
 
 .article-body {

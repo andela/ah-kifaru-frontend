@@ -1,4 +1,5 @@
 @import '../../../public/styles/colors.scss';
+@import '../../../public/styles/responsive.scss';
 
 .logo {
   width: 163px;
@@ -9,6 +10,7 @@
   &:after {
     content: url('../../../public/images/arrow_down.svg');
     margin-left: 1rem;
+    margin-left: 12px;
   }
 }
 
@@ -87,4 +89,5 @@
 .wrapper {
   background-color: $white;
   box-shadow: 0 2px 2px -2px #c4c4c490;
+  height: 4.7rem;
 }
