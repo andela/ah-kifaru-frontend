@@ -25,6 +25,11 @@ function ArticleCard(props) {
     tags = []
   } = article;
 
+  const updateBookmarkStatus = event => {
+    // TOGGLE BOOKMARK ACTION
+    toggleBookmark(article.id, isBookmarked);
+  };
+
   return (
     <article className="card flex md:flex-col mt-2 mb-2 shadow md:shadow">
       <Link to="/articles/:id" className="flex w-2/6 md:w-full">
