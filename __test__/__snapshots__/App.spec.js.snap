@@ -62,256 +62,6 @@ exports[`Application test it should render 404 PAGE without crashing 1`] = `
 </BrowserRouter>
 `;
 
-exports[`Application test it should render Home Page without crashing 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <BrowserRouter>
-    <Router
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-    >
-      <Homepage>
-        <Layout>
-          <Connect(NavBar)>
-            <NavBar
-              dispatch={[Function]}
-              isLoggedIn={false}
-              user={Object {}}
-            >
-              <nav
-                className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
-              >
-                <div
-                  className="logo flex items-center"
-                >
-                  <Link
-                    aria-labelledby="Error Swag Logo"
-                    className="flex items-center"
-                    to="/"
-                  >
-                    <a
-                      aria-labelledby="Error Swag Logo"
-                      className="flex items-center"
-                      href="/"
-                      onClick={[Function]}
-                    >
-                      <img
-                        alt="Errorswag logo"
-                        className="sm:w-8/12 md:w-full"
-                        src={
-                          Object {
-                            "process": [Function],
-                          }
-                        }
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div
-                  className="flex"
-                >
-                  <Link
-                    aria-labelledby="Search"
-                    className="small-button"
-                    to="/search"
-                  >
-                    <a
-                      aria-labelledby="Search"
-                      className="small-button"
-                      href="/search"
-                      onClick={[Function]}
-                    >
-                      <icon-mock
-                        className="h-5 w-5"
-                      />
-                    </a>
-                  </Link>
-                  <Link
-                    aria-labelledby="Notifications"
-                    className="small-button"
-                    to="/notifications"
-                  >
-                    <a
-                      aria-labelledby="Notifications"
-                      className="small-button"
-                      href="/notifications"
-                      onClick={[Function]}
-                    >
-                      <icon-mock
-                        className="h-6 w-6"
-                      />
-                    </a>
-                  </Link>
-                  <AuthButtons
-                    id="auth-buttons"
-                    show={true}
-                  >
-                    <Link
-                      aria-labelledby="Login"
-                      className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                      to="/login"
-                    >
-                      <a
-                        aria-labelledby="Login"
-                        className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                        href="/login"
-                        onClick={[Function]}
-                      >
-                        LOGIN
-                      </a>
-                    </Link>
-                    <Link
-                      aria-labelledby="Signup"
-                      className="btn red-button py-3 px-8 sm:hidden md:block"
-                      to="/signup"
-                    >
-                      <a
-                        aria-labelledby="Signup"
-                        className="btn red-button py-3 px-8 sm:hidden md:block"
-                        href="/signup"
-                        onClick={[Function]}
-                      >
-                        GET STARTED
-                      </a>
-                    </Link>
-                  </AuthButtons>
-                  <MenuIcon
-                    id="menu"
-                    isLoggedIn={false}
-                    menuOpen={false}
-                    toggleMenu={[Function]}
-                  >
-                    <button
-                      aria-expanded={false}
-                      aria-label="Menu"
-                      className="hamburger small-button sm:block md:hidden"
-                      data-active={false}
-                      id="hamburger"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <span />
-                    </button>
-                  </MenuIcon>
-                </div>
-              </nav>
-            </NavBar>
-          </Connect(NavBar)>
-          <div
-            className="m-20 text-center"
-          >
-            <h1
-              className="text-green-800"
-            >
-              Welcome to ErrorSwag, what on your mind?
-            </h1>
-            <img
-              alt="errorswag logo"
-              src={
-                Object {
-                  "process": [Function],
-                }
-              }
-            />
-            <Link
-              to="/login"
-            >
-              <a
-                href="/login"
-                onClick={[Function]}
-              >
-                <button
-                  className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-                  type="button"
-                >
-                  Login
-                </button>
-              </a>
-            </Link>
-          </div>
-          <Footer>
-            <footer
-              className="footer flex flex-wrap w-full justify-center px-10"
-            >
-              <div
-                className="md:w-1/2 h-8"
-              >
-                <p
-                  className=" flex justify-start"
-                >
-                  Designed by Kifaru Team
-                </p>
-              </div>
-              <div
-                className="md:w-1/2 h-8"
-              >
-                <ul
-                  className="flex justify-end items-center"
-                >
-                  <li
-                    className="mx-1 px-2 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                </ul>
-              </div>
-            </footer>
-          </Footer>
-        </Layout>
-      </Homepage>
-    </Router>
-  </BrowserRouter>
-</Provider>
-`;
-
 exports[`Application test should not crash app 1`] = `
 <Provider
   store={
@@ -351,7 +101,15 @@ exports[`Application test should not crash app 1`] = `
       >
         <Switch>
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(LandingPage)",
+                "type": [Function],
+              }
+            }
             computedMatch={
               Object {
                 "isExact": true,
@@ -360,7 +118,6 @@ exports[`Application test should not crash app 1`] = `
                 "url": "/",
               }
             }
-            exact={true}
             location={
               Object {
                 "hash": "",
@@ -371,7 +128,7 @@ exports[`Application test should not crash app 1`] = `
             }
             path="/"
           >
-            <Homepage
+            <Connect(LandingPage)
               history={
                 Object {
                   "action": "POP",
@@ -409,214 +166,303 @@ exports[`Application test should not crash app 1`] = `
                 }
               }
             >
-              <Layout>
-                <Connect(NavBar)>
-                  <NavBar
-                    dispatch={[Function]}
-                    isLoggedIn={false}
-                    user={Object {}}
-                  >
-                    <nav
-                      className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
+              <LandingPage
+                fetchArticles={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <Layout>
+                  <Connect(NavBar)>
+                    <NavBar
+                      dispatch={[Function]}
+                      isLoggedIn={false}
+                      user={Object {}}
                     >
-                      <div
-                        className="logo flex items-center"
+                      <nav
+                        className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
                       >
-                        <Link
-                          aria-labelledby="Error Swag Logo"
-                          className="flex items-center"
-                          to="/"
+                        <div
+                          className="logo flex items-center"
                         >
-                          <a
+                          <Link
                             aria-labelledby="Error Swag Logo"
                             className="flex items-center"
-                            href="/"
-                            onClick={[Function]}
+                            to="/"
                           >
-                            <img
-                              alt="Errorswag logo"
-                              className="sm:w-8/12 md:w-full"
-                              src={
-                                Object {
-                                  "process": [Function],
+                            <a
+                              aria-labelledby="Error Swag Logo"
+                              className="flex items-center"
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="Errorswag logo"
+                                className="sm:w-8/12 md:w-full"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
                                 }
-                              }
-                            />
-                          </a>
-                        </Link>
-                      </div>
-                      <div
-                        className="flex"
-                      >
-                        <Link
-                          aria-labelledby="Search"
-                          className="small-button"
-                          to="/search"
+                              />
+                            </a>
+                          </Link>
+                        </div>
+                        <div
+                          className="flex"
                         >
-                          <a
+                          <Link
                             aria-labelledby="Search"
                             className="small-button"
-                            href="/search"
-                            onClick={[Function]}
+                            to="/search"
                           >
-                            <icon-mock
-                              className="h-5 w-5"
-                            />
-                          </a>
-                        </Link>
-                        <Link
-                          aria-labelledby="Notifications"
-                          className="small-button"
-                          to="/notifications"
-                        >
-                          <a
+                            <a
+                              aria-labelledby="Search"
+                              className="small-button"
+                              href="/search"
+                              onClick={[Function]}
+                            >
+                              <icon-mock
+                                className="h-5 w-5"
+                              />
+                            </a>
+                          </Link>
+                          <Link
                             aria-labelledby="Notifications"
                             className="small-button"
-                            href="/notifications"
-                            onClick={[Function]}
-                          >
-                            <icon-mock
-                              className="h-6 w-6"
-                            />
-                          </a>
-                        </Link>
-                        <AuthButtons
-                          id="auth-buttons"
-                          show={true}
-                        >
-                          <Link
-                            aria-labelledby="Login"
-                            className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                            to="/login"
+                            to="/notifications"
                           >
                             <a
+                              aria-labelledby="Notifications"
+                              className="small-button"
+                              href="/notifications"
+                              onClick={[Function]}
+                            >
+                              <icon-mock
+                                className="h-6 w-6"
+                              />
+                            </a>
+                          </Link>
+                          <AuthButtons
+                            id="auth-buttons"
+                            show={true}
+                          >
+                            <Link
                               aria-labelledby="Login"
                               className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                              href="/login"
-                              onClick={[Function]}
+                              to="/login"
                             >
-                              LOGIN
-                            </a>
-                          </Link>
-                          <Link
-                            aria-labelledby="Signup"
-                            className="btn red-button py-3 px-8 sm:hidden md:block"
-                            to="/signup"
-                          >
-                            <a
+                              <a
+                                aria-labelledby="Login"
+                                className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                                href="/login"
+                                onClick={[Function]}
+                              >
+                                LOGIN
+                              </a>
+                            </Link>
+                            <Link
                               aria-labelledby="Signup"
                               className="btn red-button py-3 px-8 sm:hidden md:block"
-                              href="/signup"
-                              onClick={[Function]}
+                              to="/signup"
                             >
-                              GET STARTED
-                            </a>
-                          </Link>
-                        </AuthButtons>
-                        <MenuIcon
-                          id="menu"
-                          isLoggedIn={false}
-                          menuOpen={false}
-                          toggleMenu={[Function]}
-                        >
-                          <button
-                            aria-expanded={false}
-                            aria-label="Menu"
-                            className="hamburger small-button sm:block md:hidden"
-                            data-active={false}
-                            id="hamburger"
-                            onClick={[Function]}
-                            type="button"
+                              <a
+                                aria-labelledby="Signup"
+                                className="btn red-button py-3 px-8 sm:hidden md:block"
+                                href="/signup"
+                                onClick={[Function]}
+                              >
+                                GET STARTED
+                              </a>
+                            </Link>
+                          </AuthButtons>
+                          <MenuIcon
+                            id="menu"
+                            isLoggedIn={false}
+                            menuOpen={false}
+                            toggleMenu={[Function]}
+                            user={Object {}}
                           >
-                            <span />
-                          </button>
-                        </MenuIcon>
+                            <button
+                              aria-expanded={false}
+                              aria-label="Menu"
+                              className="hamburger small-button sm:block md:hidden"
+                              data-active={false}
+                              id="hamburger"
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              <span />
+                            </button>
+                          </MenuIcon>
+                        </div>
+                      </nav>
+                    </NavBar>
+                  </Connect(NavBar)>
+                  <div
+                    className="w-full"
+                  >
+                    <SearchCard>
+                      <div
+                        className="flex bg-color h-64 header-card w-100 justify-center items-center"
+                      >
+                        <div
+                          className="flex flex-col justify-center items-center w-full p-4"
+                        >
+                          <h1
+                            className="text-white font-bold text-2xl text-center"
+                          >
+                            Your Ideas and thoughts are
+                          </h1>
+                          <h2
+                            className="text-white font-bold text-2xl"
+                          >
+                            worth sharing.
+                          </h2>
+                          <form
+                            className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white"
+                            onSubmit={[Function]}
+                          >
+                            <icon-mock
+                              className="h-8 w-8 px-2"
+                            />
+                            <input
+                              className="w-full h-10 rounded text-sm outline-none"
+                              data-testid="searchInput"
+                              onChange={[Function]}
+                              placeholder="Search by author, interest, and title"
+                              type="text"
+                            />
+                          </form>
+                        </div>
                       </div>
-                    </nav>
-                  </NavBar>
-                </Connect(NavBar)>
-                <div
-                  className="m-20 text-center"
-                >
-                  <h1
-                    className="text-green-800"
-                  >
-                    Welcome to ErrorSwag, what on your mind?
-                  </h1>
-                  <img
-                    alt="errorswag logo"
-                    src={
-                      Object {
-                        "process": [Function],
-                      }
-                    }
-                  />
-                  <Link
-                    to="/login"
-                  >
-                    <a
-                      href="/login"
-                      onClick={[Function]}
+                    </SearchCard>
+                    <div
+                      className=" w-11/12 mx-auto mt-6"
                     >
-                      <button
-                        className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-                        type="button"
+                      <div
+                        className="w-full flex flex-wrap justify-between"
                       >
-                        Login
-                      </button>
-                    </a>
-                  </Link>
-                </div>
-                <Footer>
-                  <footer
-                    className="footer flex flex-wrap w-full justify-center px-10"
+                        <span>
+                           There are no articles at the moment :( 
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="bottom-card h-64 flex flex-col items-end justify-center pr-12 mt-20 lg:mt-48"
                   >
                     <div
-                      className="md:w-1/2 h-8"
+                      className="text-white text-lg font-bold antialiased tracking-wide"
                     >
-                      <p
-                        className=" flex justify-start"
-                      >
-                        Designed by Kifaru Team
-                      </p>
+                      Your ideas and thoughts are
                     </div>
                     <div
-                      className="md:w-1/2 h-8"
+                      className="text-white text-lg font-bold antialiased tracking-wide"
                     >
-                      <ul
-                        className="flex justify-end items-center"
-                      >
-                        <li
-                          className="mx-1 px-2 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                      </ul>
+                      worth sharing.
                     </div>
-                  </footer>
-                </Footer>
-              </Layout>
-            </Homepage>
+                    <Link
+                      className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
+                      to="/"
+                    >
+                      <a
+                        className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <button
+                          type="button"
+                        >
+                          Start Writing
+                        </button>
+                      </a>
+                    </Link>
+                  </div>
+                  <Footer>
+                    <footer
+                      className="footer flex flex-wrap w-full justify-center px-10"
+                    >
+                      <div
+                        className="md:w-1/2 h-8"
+                      >
+                        <p
+                          className=" flex justify-start"
+                        >
+                          Designed by Kifaru Team
+                        </p>
+                      </div>
+                      <div
+                        className="md:w-1/2 h-8"
+                      >
+                        <ul
+                          className="flex justify-end items-center"
+                        >
+                          <li
+                            className="mx-1 px-2 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                        </ul>
+                      </div>
+                    </footer>
+                  </Footer>
+                </Layout>
+              </LandingPage>
+            </Connect(LandingPage)>
           </Route>
         </Switch>
       </Router>
@@ -1028,7 +874,7 @@ exports[`Application test should work fine on Login Page 1`] = `
                       <div
                         className="sweet-loading"
                       >
-                        <Loader
+                        <onlyUpdateForKeys(Loader)
                           color="#f00"
                           css={
                             Object {
@@ -1040,7 +886,21 @@ exports[`Application test should work fine on Login Page 1`] = `
                           loading={false}
                           size={50}
                           sizeUnit="px"
-                        />
+                        >
+                          <Loader
+                            color="#f00"
+                            css={
+                              Object {
+                                "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkxvZ2luRm9ybS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUEwRndCIiwiZmlsZSI6IkxvZ2luRm9ybS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgJy4vTG9naW4uc2Nzcyc7XG5pbXBvcnQgeyBMaW5rLCBSZWRpcmVjdCB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nO1xuaW1wb3J0IHsgY29ubmVjdCB9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCBCb3VuY2VMb2FkZXIgZnJvbSAncmVhY3Qtc3Bpbm5lcnMvQm91bmNlTG9hZGVyJztcbmltcG9ydCBQcm9wVHlwZXMgZnJvbSAncHJvcC10eXBlcyc7XG5pbXBvcnQgeyBjc3MgfSBmcm9tICdAZW1vdGlvbi9jb3JlJztcbmltcG9ydCBsb2dvIGZyb20gJy4uLy4uL2Fzc2V0cy9pbWFnZXMvbG9nby5wbmcnO1xuaW1wb3J0IHsgYXV0aEFjdGlvbiB9IGZyb20gJy4uLy4uL3N0b3JlL21vZHVsZXMvYXV0aC9hY3Rpb25zJztcbmltcG9ydCBTb2NpYWxNZWRpYUxvZ2luIGZyb20gJy4uL1NvY2lhbE1lZGlhL1NvY2lhbE1lZGlhTG9naW4nO1xuXG5leHBvcnQgY2xhc3MgTG9naW5Gb3JtIGV4dGVuZHMgQ29tcG9uZW50IHtcbiAgY29uc3RydWN0b3IocHJvcHMpIHtcbiAgICBzdXBlcihwcm9wcyk7XG4gICAgdGhpcy5oYW5kbGVJbnB1dEZpZWxkQ2hhbmdlID0gdGhpcy5oYW5kbGVJbnB1dEZpZWxkQ2hhbmdlLmJpbmQodGhpcyk7XG4gICAgdGhpcy5oYW5kbGVTdWJtaXQgPSB0aGlzLmhhbmRsZVN1Ym1pdC5iaW5kKHRoaXMpO1xuICAgIHRoaXMuaXNMb2FkaW5nID0gZmFsc2U7XG4gICAgdGhpcy5zdGF0ZSA9IHtcbiAgICAgIHN1Ym1pdHR0aW5nOiBmYWxzZSxcbiAgICAgIGVtYWlsOiAnJyxcbiAgICAgIHBhc3N3b3JkOiAnJyxcbiAgICAgIGVycm9yczoge1xuICAgICAgICBlbWFpbDogJycsXG4gICAgICAgIHBhc3N3b3JkOiAnJ1xuICAgICAgfVxuICAgIH07XG4gIH1cblxuICBjb21wb25lbnREaWRNb3VudCgpIHtcbiAgICBjb25zdCB7IGVycm9yIH0gPSB0aGlzLnByb3BzO1xuICAgIGlmIChlcnJvcikge1xuICAgICAgdGhpcy5zZXRTdGF0ZSh7IHN1Ym1pdHR0aW5nOiB0cnVlIH0pO1xuICAgICAgcmV0dXJuO1xuICAgIH1cbiAgICB0aGlzLnNldFN0YXRlKHsgc3VibWl0dHRpbmc6IGZhbHNlIH0pO1xuICB9XG5cbiAgaGFuZGxlU3VibWl0KGUpIHtcbiAgICBlLnByZXZlbnREZWZhdWx0KCk7XG4gICAgY29uc3QgeyBlbWFpbCwgcGFzc3dvcmQgfSA9IHRoaXMuc3RhdGU7XG5cbiAgICBjb25zdCB7IGF1dGhBY3Rpb246IGxvZ2luQWN0aW9uIH0gPSB0aGlzLnByb3BzO1xuICAgIGNvbnN0IGVycm9ycyA9IHt9O1xuICAgIGlmICghZW1haWwpIGVycm9ycy5lbWFpbCA9ICdFbWFpbCBjYW5ub3QgYmUgZW1wdHknO1xuICAgIGlmICghcGFzc3dvcmQpIGVycm9ycy5wYXNzd29yZCA9ICdQYXNzd29yZCBjYW5ub3QgYmUgZW1wdHknO1xuICAgIGlmIChPYmplY3Qua2V5cyhlcnJvcnMpLmxlbmd0aCkge1xuICAgICAgdGhpcy5zZXRTdGF0ZShwcmV2U3RhdGUgPT4gKHtcbiAgICAgICAgLi4ucHJldlN0YXRlLFxuICAgICAgICBlcnJvcnM6IHtcbiAgICAgICAgICAuLi5lcnJvcnNcbiAgICAgICAgfVxuICAgICAgfSkpO1xuICAgICAgcmV0dXJuO1xuICAgIH1cbiAgICBjb25zdCB7XG4gICAgICBsb2NhdGlvbjogeyB1cmwgfSxcbiAgICAgIGhpc3RvcnlcbiAgICB9ID0gdGhpcy5wcm9wcztcblxuICAgIHRoaXMuc2V0U3RhdGUoeyBzdWJtaXR0dGluZzogdHJ1ZSB9KTtcblxuICAgIGxvZ2luQWN0aW9uKHsgdXNlckRhdGE6IHsgZW1haWwsIHBhc3N3b3JkIH0sIGhpc3RvcnksIHVybCB9KTtcbiAgfVxuXG4gIGhhbmRsZUlucHV0RmllbGRDaGFuZ2UoZXZlbnQpIHtcbiAgICBjb25zdCB7XG4gICAgICB0YXJnZXQ6IHsgbmFtZSwgdmFsdWUgfVxuICAgIH0gPSBldmVudDtcbiAgICB0aGlzLnNldFN0YXRlKHByZXZTdGF0ZSA9PiAoe1xuICAgICAgW25hbWVdOiB2YWx1ZSxcbiAgICAgIGVycm9yczoge1xuICAgICAgICAuLi5wcmV2U3RhdGUuZXJyb3JzLFxuICAgICAgICBbbmFtZV06ICcnXG4gICAgICB9XG4gICAgfSkpO1xuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIGNvbnN0IHtcbiAgICAgIGlzQXV0aGVudGljYXRlZCxcbiAgICAgIGxvY2F0aW9uOiB7IHVybCB9XG4gICAgfSA9IHRoaXMucHJvcHM7XG4gICAgY29uc3Qge1xuICAgICAgZXJyb3JzOiB7IGVtYWlsOiBlbWFpbEVycm9yLCBwYXNzd29yZDogcGFzc3dvcmRFcnJvciB9XG4gICAgfSA9IHRoaXMuc3RhdGU7XG4gICAgaWYgKGlzQXV0aGVudGljYXRlZCkgcmV0dXJuIDxSZWRpcmVjdCB0bz17dXJsIHx8ICcvJ30gLz47XG4gICAgY29uc3QgeyBzdGF0dXMgfSA9IHRoaXMucHJvcHM7XG5cbiAgICB0aGlzLmlzTG9hZGluZyA9IHN0YXR1cyA9PT0gJ2F1dGhlbnRpY2F0aW9uUGVuZGluZyc7XG5cbiAgICBjb25zdCBvdmVycmlkZSA9IGNzc2BcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgICBib3JkZXItY29sb3I6IHJlZDtcbiAgICBgO1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1kOnctMS8yIHctZnVsbCByb3VuZGVkLXIgYmctd2hpdGUgaC1mdWxsXCI+XG4gICAgICAgIDxmb3JtIGNsYXNzTmFtZT1cImZsZXgtNCBweC01XCIgb25TdWJtaXQ9e3RoaXMuaGFuZGxlU3VibWl0fT5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJsb2dpbi1mb3JtLWxvZ28gcHQtMTAgcGItMyBteC1hdXRvXCJcbiAgICAgICAgICAgICAgc3JjPXtsb2dvfVxuICAgICAgICAgICAgICBhbHQ9XCJlcnJvcnN3YWcgbG9nb1wiXG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGxhYmVsXG4gICAgICAgICAgICBjbGFzc05hbWU9XCJibG9jayB0ZXh0LWdyYXktNzAwIHRleHQtc20gZm9udC1ib2xkXCJcbiAgICAgICAgICAgIGh0bWxGb3I9XCJlbWFpbFwiXG4gICAgICAgICAgPlxuICAgICAgICAgICAgRW1haWxcbiAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJhcHBlYXJhbmNlLW5vbmUgYmxvY2sgdy1mdWxsIGJnLWdyYXktMjAwIHRleHQtZ3JheS03MDAgYm9yZGVyIHJvdW5kZWQgcHktMyBweC00IG1iLTMgbGVhZGluZy10aWdodCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ymctd2hpdGVcIlxuICAgICAgICAgICAgICB0eXBlPVwiZW1haWxcIlxuICAgICAgICAgICAgICBuYW1lPVwiZW1haWxcIlxuICAgICAgICAgICAgICBpZD1cImVtYWlsXCJcbiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJFbWFpbCBBZGRyZXNzXCJcbiAgICAgICAgICAgICAgb25DaGFuZ2U9e3RoaXMuaGFuZGxlSW5wdXRGaWVsZENoYW5nZX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICB7ISFlbWFpbEVycm9yICYmIChcbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtcmVkLTYwMCB0ZXh0LXhzXCI+e2VtYWlsRXJyb3J9PC9zcGFuPlxuICAgICAgICAgICl9XG4gICAgICAgICAgPGxhYmVsXG4gICAgICAgICAgICBjbGFzc05hbWU9XCJibG9jayB0ZXh0LWdyYXktNzAwIHRleHQtc20gZm9udC1ib2xkXCJcbiAgICAgICAgICAgIGh0bWxGb3I9XCJwYXNzd29yZFwiXG4gICAgICAgICAgPlxuICAgICAgICAgICAgUGFzc3dvcmRcbiAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJhcHBlYXJhbmNlLW5vbmUgYmxvY2sgdy1mdWxsIGJnLWdyYXktMjAwIHRleHQtZ3JheS03MDAgYm9yZGVyIHJvdW5kZWQgcHktMyBweC00IG1iLTMgbGVhZGluZy10aWdodCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6Ymctd2hpdGVcIlxuICAgICAgICAgICAgICB0eXBlPVwicGFzc3dvcmRcIlxuICAgICAgICAgICAgICBuYW1lPVwicGFzc3dvcmRcIlxuICAgICAgICAgICAgICBpZD1cInBhc3N3b3JkXCJcbiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJQYXNzd29yZFwiXG4gICAgICAgICAgICAgIG9uQ2hhbmdlPXt0aGlzLmhhbmRsZUlucHV0RmllbGRDaGFuZ2V9XG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgeyEhcGFzc3dvcmRFcnJvciAmJiAoXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXJlZC02MDAgdGV4dC14c1wiPntwYXNzd29yZEVycm9yfTwvc3Bhbj5cbiAgICAgICAgICApfVxuICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgY2xhc3NOYW1lPVwibG9naW4tYnRuIGhvdmVyOmJnLXRlYWwtNDAwIGN1cnNvci1wb2ludGVyIHRleHQtd2hpdGUgYXBwZWFyYW5jZS1ub25lIGJsb2NrIHctZnVsbCBib3JkZXIgcm91bmRlZCBweS0zIHB4LTQgbWItMSBsZWFkaW5nLXRpZ2h0IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpiZy1yZWQgZm9jdXM6dGV4dC1ncmVlblwiXG4gICAgICAgICAgICB0eXBlPVwic3VibWl0XCJcbiAgICAgICAgICAgIHZhbHVlPVwiTG9naW5cIlxuICAgICAgICAgICAgZGlzYWJsZWQ9e3RoaXMuc3RhdGUuc3VibWl0dHRpbmd9XG4gICAgICAgICAgLz5cbiAgICAgICAgPC9mb3JtPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggZmxleC1jb2wgdGV4dC1zbSB0ZXh0LWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gaXRlbXMtY2VudGVyIHctZnVsbCBwdC0zIHBiLTVcIj5cbiAgICAgICAgICA8TGluayB0bz1cIi9mb3Jnb3QtcGFzc3dvcmRcIj5cbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtY29sb3IgbWItMlwiPkZvcmdvdCBQYXNzd29yZDwvcD5cbiAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgPExpbmsgdG89XCIvc2lnbnVwXCI+XG4gICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgRG9uJmFwb3M7dCBoYXZlIEFjY291bnQ/XG4gICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtY29sb3JcIj4gU2lnbiB1cDwvc3Bhbj5cbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8L0xpbms+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8U29jaWFsTWVkaWFMb2dpbiBsb2NhdGlvbj17bG9jYXRpb259IC8+XG4gICAgICAgIDxiciAvPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInN3ZWV0LWxvYWRpbmdcIj5cbiAgICAgICAgICA8Qm91bmNlTG9hZGVyXG4gICAgICAgICAgICBjc3M9e292ZXJyaWRlfVxuICAgICAgICAgICAgc2l6ZVVuaXQ9XCJweFwiXG4gICAgICAgICAgICBzaXplPXs1MH1cbiAgICAgICAgICAgIGNvbG9yPVwiI2YwMFwiXG4gICAgICAgICAgICBsb2FkaW5nPXt0aGlzLmlzTG9hZGluZ31cbiAgICAgICAgICAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH1cbn1cbkxvZ2luRm9ybS5wcm9wVHlwZXMgPSB7XG4gIGxvY2F0aW9uOiBQcm9wVHlwZXMuc2hhcGUoe1xuICAgIGZyb206IFByb3BUeXBlcy5zdHJpbmcsXG4gICAgdXJsOiBQcm9wVHlwZXMuc3RyaW5nXG4gIH0pLmlzUmVxdWlyZWQsXG4gIGF1dGhBY3Rpb246IFByb3BUeXBlcy5mdW5jLmlzUmVxdWlyZWRcbn07XG5cbmNvbnN0IG1hcFN0YXRlVG9Qcm9wcyA9IHN0YXRlID0+ICh7XG4gIGVycm9yOiBzdGF0ZS5hdXRoUmVkdWNlci5lcnJvcixcbiAgaXNBdXRoZW50aWNhdGVkOiBzdGF0ZS5hdXRoUmVkdWNlci5pc0F1dGhlbnRpY2F0ZWQsXG4gIHN0YXR1czogc3RhdGUuYXV0aFJlZHVjZXIuc3RhdHVzXG59KTtcbmNvbnN0IG1hcERpc3BhdGNoVG9Qcm9wcyA9IHtcbiAgYXV0aEFjdGlvblxufTtcbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QoXG4gIG1hcFN0YXRlVG9Qcm9wcyxcbiAgbWFwRGlzcGF0Y2hUb1Byb3BzXG4pKExvZ2luRm9ybSk7XG4iXX0= */",
+                                "name": "1dlpllr-LoginForm",
+                                "styles": "display:block;margin:0 auto;border-color:red;label:LoginForm;",
+                              }
+                            }
+                            loading={false}
+                            size={50}
+                            sizeUnit="px"
+                          />
+                        </onlyUpdateForKeys(Loader)>
                       </div>
                     </div>
                   </LoginForm>

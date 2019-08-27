@@ -12,7 +12,7 @@
     "heroku-postbuild": "npm run build",
     "start": "node server.js",
     "build": "webpack --env.mode production",
-    "start:dev": "webpack-dev-server --hot --env.mode development --open --port 5000",
+    "start:dev": "webpack-dev-server --hot --env.mode development --open --port 4000",
     "test": "jest --env=jsdom --coverage",
     "test:watch": "jest --env=jsdom --watch --coverage",
     "coverage": "cat ./coverage/lcov.info | coveralls"
@@ -120,6 +120,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.10",
+    "react-paginate": "^6.3.0",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.0.1",

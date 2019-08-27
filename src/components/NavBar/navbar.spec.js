@@ -4,7 +4,6 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar, { AuthButtons } from '@components/NavBar';
-import { stat } from 'fs';
 
 const mockState = () => {
   const setState = jest.fn();
