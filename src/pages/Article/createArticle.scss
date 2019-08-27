@@ -1,0 +1,181 @@
+textarea {
+  font-weight: 700;
+  font-size: 2rem !important;
+  background: transparent;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.ce-toolbar__content {
+  float: left;
+}
+
+.block-md {
+  position: relative !important;
+}
+
+.content-area {
+  width: 90%;
+  min-height: -webkit-fill-available;
+}
+.h-content{
+  height: max-content;
+}
+.ce-paragraph {
+  font-size: .7rem !important;
+  padding: 1rem;
+}
+
+.ce-block__content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.description {
+  padding-bottom: 300px;
+}
+
+.codex-editor__redactor {
+  padding-bottom: 0 !important;
+}
+
+.draft-button:focus,
+.publish-button:focus {
+  outline: none;
+}
+
+.tag-input-field-class {
+  line-height: 1rem !important;
+  width: 100%;
+  top: 80%;
+  font-size: .8rem;
+  background: transparent !important;
+  border-bottom: 1px solid #333;
+}
+
+.tag-input-field-class:focus {
+  outline: none;
+}
+
+.ce-toolbar__plus {
+  display: block !important;
+  border-radius: 50%;
+  box-shadow: 1px 1px #999;
+  border: 1px solid gray;
+  width: auto !important;
+  height: auto !important;
+  visibility: visible !important;
+  padding: .5rem;
+}
+
+.ce-paragraph {
+  line-height: 1.6em;
+  font-weight: 400;
+  outline: none;
+  font-size: 1rem;
+
+  p {
+    line-height: 1.6em;
+    font-family: auto;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  code {
+    font-size: 2rem;
+  }
+}
+
+.tagClass {
+  display: inline-block;
+  margin: 1rem;
+  font-size: .9rem;
+}
+
+.removeClass {
+  display: none;
+}
+
+.tagsClass {
+  margin: 20px auto !important;
+}
+.selectedClass{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.tagInputClass {
+  width: 100%;
+  text-align: center;
+}
+
+.tag-input-field-class {
+  background: inherit;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  height: 2rem;
+  font-size: 1rem;
+}
+.body-content{
+  flex: 1 0 0;
+  height: 90%;
+}
+.tags{
+  flex: 0 1 0;
+  height: 10%;
+}
+
+.bg-ash{
+  background: #eee;
+}
+.min-h-5{
+  min-height: 40rem;
+}
+
+.loader {
+  height: -webkit-fill-available;
+}
+
+@media(min-width: 425px) {
+  .content-area{
+    width: 80%;
+  }
+  .h-30{
+    height: 35vh;
+  }
+
+  .ce-toolbar__content {
+    float: left;
+    left: 0 !important;
+  }
+
+  .ce-paragraph {
+    font-size: 1rem !important;
+  }
+
+  .block-md {
+    width: 60% !important;
+    position: relative !important;
+    bottom: 0;
+  }
+
+  .md-8 {
+    width: 80%;
+    height: 87vh;
+    margin: 0;
+  }
+
+  .md-2 {
+    width: 20%;
+    margin: 0;
+  }
+
+  .md-flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+}

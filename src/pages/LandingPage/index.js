@@ -68,7 +68,7 @@ export const LandingPage = ({
           worth sharing.
         </div>
         <Link
-          to="/"
+          to="/new-article"
           className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
         >
           Start Writing

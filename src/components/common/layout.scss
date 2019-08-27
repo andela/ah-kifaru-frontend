@@ -1,0 +1,13 @@
+.app-container{
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  height: 100vh!important;
+}
+
+main{
+  height: max-content!important;
+}

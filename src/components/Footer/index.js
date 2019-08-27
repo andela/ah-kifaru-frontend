@@ -9,7 +9,7 @@ import {
 } from '../../assets/icons';
 
 const Footer = () => (
-  <footer className="footer flex flex-wrap w-full justify-center px-10">
+  <footer className="footer flex flex-wrap w-full justify-center px-10 sticky">
     <div className="md:w-1/2 h-8">
       <p className=" flex justify-start">Designed by Kifaru Team</p>
     </div>
