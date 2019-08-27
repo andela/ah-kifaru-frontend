@@ -59,7 +59,7 @@ describe('SocialMediaLogin', () => {
       </Provider>
     );
 
-    expect(localStorage.getItem('token')).toEqual(userToken);
+    expect(JSON.parse(localStorage.getItem('token'))).toEqual(userToken);
     expect(wrapper.find('Redirect').length).toBe(1);
     expect(wrapper.find('Redirect').props().to).toBe('/');
   });
@@ -78,7 +78,7 @@ describe('SocialMediaLogin', () => {
       </Provider>
     );
 
-    expect(localStorage.getItem('token')).toEqual(userToken);
+    expect(JSON.parse(localStorage.getItem('token'))).toEqual(userToken);
     expect(wrapper.find('Redirect').length).toBe(1);
     expect(wrapper.find('Redirect').props().to).toBe(location.url);
   });
@@ -99,7 +99,7 @@ describe('SocialMediaLogin', () => {
       </Provider>
     );
 
-    expect(localStorage.getItem('token')).toEqual(null);
+    expect(JSON.parse(localStorage.getItem('token'))).toEqual(null);
   });
   it('should display the social login buttons', () => {
     store = createStore(false);
