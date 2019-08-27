@@ -65,11 +65,6 @@ NavBar.propTypes = {
   })
 };
 
-const mapToProps = state => ({
-  isLoggedIn: state.authReducer.isAuthenticated,
-  user: state.authReducer.user
-});
-
 const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen }) => {
   return isLoggedIn ? (
     <button
@@ -128,7 +123,14 @@ AuthButtons.propTypes = {
   show: PropTypes.bool.isRequired
 };
 
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.authReducer.isAuthenticated,
+    user: state.authReducer.user
+  };
+};
+
 export default connect(
-  mapToProps,
+  mapStateToProps,
   null
 )(NavBar);

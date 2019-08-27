@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LoginPage from '@pages/LoginPage';
+import LoginPage from '@pages/loginPage';
 import HomePage from '@pages/homePage';
 import NotFoundPage from '@pages/notFoundPage';
 import SignUpPage from '@pages/Signup/index';
 import PasswordResetPage from '@pages/ResetPassword';
 import RequestPasswordResetPage from '@pages/ForgotPassword';
+import ArticlesPage from '@pages/LandingPage/index';
 
 const App = () => (
   <Router>
@@ -13,6 +14,7 @@ const App = () => (
       <Route path="/" exact component={HomePage} />
       <Route path="/signup" component={SignUpPage} />
       <Route path="/login" exact component={LoginPage} />
+      <Route path="/articles" component={ArticlesPage} />
       <Route
         path="/reset-password/:token"
         exact
@@ -24,6 +26,7 @@ const App = () => (
         component={RequestPasswordResetPage}
       />
       <Route component={NotFoundPage} />
+      <Route path="*" component={NotFoundPage} />
     </Switch>
   </Router>
 );

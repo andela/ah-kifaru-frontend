@@ -4,22 +4,39 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar, { AuthButtons } from '@components/NavBar';
+import { stat } from 'fs';
 
 const mockState = () => {
   const setState = jest.fn();
   const useStateSpy = jest.spyOn(React, 'useState');
   useStateSpy.mockImplementation(() => [true, setState]);
 };
-const authReducer = {
+
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
+let store;
+
+const initialState = {
+  error: null,
   isAuthenticated: false,
   user: {},
   status: 'rest'
 };
-const middlewares = [thunk];
-const mockStore = configureStore(middlewares);
-const store = mockStore({
-  authReducer
-});
+
+const renderWithEnzymes = state => {
+  store = mockStore({
+    authReducer: {
+      ...state
+    }
+  });
+  return mount(
+    <Provider store={store}>
+      <Router>
+        <NavBar />
+      </Router>
+    </Provider>
+  );
+};
 
 describe('<NavBar />', () => {
   let wrapper;
@@ -29,27 +46,20 @@ describe('<NavBar />', () => {
   });
 
   it('should set data-active to true when isLoggedIn is set to false and harmbugger is clicked', () => {
-    wrapper = mount(
-      <Provider store={store}>
-        <Router>
-          <NavBar />
-        </Router>
-      </Provider>
-    );
+    wrapper = renderWithEnzymes(initialState);
     wrapper.find('#hamburger').simulate('click');
     mockState();
     expect(wrapper.find('#hamburger').props()['data-active']).toEqual(true);
   });
 
   it('should display the avatar icon when isLoggedIn is set to true', () => {
-    authReducer.isAuthenticated = true;
-    wrapper = mount(
-      <Provider store={store}>
-        <Router>
-          <NavBar />
-        </Router>
-      </Provider>
-    );
+    wrapper = renderWithEnzymes({
+      error: null,
+      isAuthenticated: true,
+      user: {},
+      status: 'rest'
+    });
+
     expect(
       wrapper
         .find('#menu')
@@ -67,14 +77,7 @@ describe('<NavBar />', () => {
   });
 
   it('should display auth button when isLoggedIn is false ', () => {
-    authReducer.isAuthenticated = false;
-    wrapper = mount(
-      <Provider store={store}>
-        <Router>
-          <NavBar />
-        </Router>
-      </Provider>
-    );
+    wrapper = renderWithEnzymes(initialState);
     expect(wrapper.find('#auth-buttons').children()).toHaveLength(2);
 
     expect(
@@ -93,14 +96,13 @@ describe('<NavBar />', () => {
   });
 
   it('should not display auth button when isLoggedIn is true ', () => {
-    authReducer.isAuthenticated = true;
-    wrapper = mount(
-      <Provider store={store}>
-        <Router>
-          <NavBar />
-        </Router>
-      </Provider>
-    );
+    wrapper = renderWithEnzymes({
+      error: null,
+      isAuthenticated: true,
+      user: {},
+      status: 'rest'
+    });
+
     expect(wrapper.find('#auth-buttons').children()).not.toHaveLength(2);
 
     expect(toJson(wrapper.find('#auth-buttons').childAt(0))).toBeFalsy();
