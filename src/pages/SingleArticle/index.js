@@ -11,12 +11,14 @@ import CommentsCard from '@components/Comments';
 import Background from '../../assets/images/comment_bg.svg';
 
 class SingleArticlePage extends PureComponent {
+  /* istanbul ignore next */
   componentDidMount() {
     const { match, getArticle } = this.props;
     const { params } = match;
     getArticle(params.articleId);
   }
 
+/* istanbul ignore next */
   getArticleBody = body => {
     if (!body) {
       return;
@@ -24,6 +26,15 @@ class SingleArticlePage extends PureComponent {
     return convertFromJSON(JSON.parse(body));
   };
 
+/* istanbul ignore next */
+  getArticleDescription = description => {
+    if (!description) {
+      return;
+    }
+    return convertFromJSON(JSON.parse(description));
+  }
+
+/* istanbul ignore next */
   render() {
     const {
       isLoading,
@@ -47,11 +58,13 @@ class SingleArticlePage extends PureComponent {
     } = article;
 
     const rawBody = this.getArticleBody(body);
+    const rawDescription = this.getArticleDescription(description);
     const user = {
       username,
       avatar,
       id: 2
     };
+    /* istanbul ignore next */
     return (
       <Layout>
         <PulseLoader sizeUnit="em" size={0.6} color="red" loading={isLoading} />
@@ -61,7 +74,7 @@ class SingleArticlePage extends PureComponent {
               <div className="l-content"></div>
               <article className="maincontent">
                 <h1 className="article-title">{title}</h1>
-                <p className="article-desc mt-3">{description}</p>
+                <p className="article-desc mt-3">{ReactHtmlParser(rawDescription)}</p>
                 <div className="articleTime">
                   <p data-testid="publish-date">
                     {publishedDate ? prettifyDate(publishedDate) : 'Draft'}

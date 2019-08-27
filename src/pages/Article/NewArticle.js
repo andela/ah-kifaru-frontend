@@ -23,7 +23,8 @@ export const getImage = ({ blocks }) => {
     'http://res.cloudinary.com/dmsohf8ul/image/upload/v1566901277/kifaru/uf8j7kxjvzxeon5b2wtn.png';
   if (blocks.length > 0) {
     const firstImage = blocks.find(block => block.type === 'image');
-    if (typeof firstImage !== undefined) {
+    console.log('first', firstImage);
+    if (firstImage) {
       const {
         file: { url }
       } = firstImage.data;
@@ -200,7 +201,7 @@ class NewArticle extends React.Component {
                         onChange={this.onChange}
                       />
                       <div
-                        className="cursor-text bg-ash"
+                        className="cursor-text bg-ash rounded px-2"
                         ref={this.editorRef}
                         onClick={this.focusEditor}
                       >
@@ -212,7 +213,7 @@ class NewArticle extends React.Component {
                         />
                       </div>
                       <div
-                        className="cursor-text bg-ash min-h-5"
+                        className="cursor-text bg-ash min-h-5 rounded px-2"
                         ref={this.editorRef}
                         onClick={this.focusEditor}
                       >

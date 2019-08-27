@@ -20,7 +20,9 @@ const createStore = (isAuthenticated = false, isLoading = false) => {
       ...content,
       isAuthenticated
     },
-    createArticleReducer: { ...isLoading }
+    createArticleReducer: {
+      ...isLoading
+    }
   });
   return store;
 };
