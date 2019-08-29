@@ -1,7 +1,7 @@
 import React from 'react';
-import Facebook from '../icons/facebook_btn.svg';
-import Google from '../icons/google_btn.svg';
-import Github from '../icons/login_github.svg';
+import Facebook from './icons/facebook_btn.svg';
+import Google from './icons/google_btn.svg';
+import Github from './icons/login_github.svg';
 import './social.css';
 
 const GITHUB_LOGIN = `http://localhost:3000/api/v1/auth/github`;
