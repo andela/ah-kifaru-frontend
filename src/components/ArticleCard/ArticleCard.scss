@@ -1,0 +1,54 @@
+@import '../../../public/styles/colors.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $dark-grey;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.article-image {
+  min-width: 40%;
+  background-size: cover;
+}
+
+.text-overflow {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-overflow-one-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.small-text {
+  font-size: 0.625rem;
+  line-height: 127.4%;
+  color: $dark-grey;
+}
+
+.author-name {
+  color: $danger;
+}
+
+.dotSeparator:after {
+  content: '\00B7';
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 27%;
+  }
+}
