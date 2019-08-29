@@ -8,6 +8,8 @@ import LinkedInIcon from './linkedin.svg';
 import YoutubeIcon from './youtube.svg';
 import TwitterIcon from './twitter.svg';
 import SuccessIcon from './success.svg';
+import BookmarkIcon from './bookmark.svg';
+import BookmarkedIcon from './bookmarked.svg';
 
 export {
   SearchIcon,
@@ -19,5 +21,7 @@ export {
   LinkedInIcon,
   YoutubeIcon,
   TwitterIcon,
-  SuccessIcon
+  SuccessIcon,
+  BookmarkIcon,
+  BookmarkedIcon
 };
