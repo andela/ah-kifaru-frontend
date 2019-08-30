@@ -48,7 +48,7 @@ export const article = {
   publishedDate: 'June 25',
   author: 'Mark',
   readTime: '2 mins read'
-}
+};
 export const mockStoreData = {
   commentReducer: {
     comment: [

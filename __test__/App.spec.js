@@ -4,10 +4,11 @@ import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import LoginPage from '@pages/LoginPage';
-import HomePage from '@pages/homePage';
 import NotFoundPage from '@pages/notFoundPage';
+import landingPage from '@modules/landingPage/index';
 import Menu from '../src/components/userMenu';
 import Auth from '../src/components/auth';
+import * as landingPageReducer from '../src/store/modules/landingPage/index';
 
 import App from '../src/routes/AppRouter';
 
@@ -18,7 +19,8 @@ const store = mockStore({
     isAuthenticated: false,
     user: {},
     status: 'rest'
-  }
+  },
+  articleReducer: landingPageReducer
 });
 const props = {
   authAction: jest.fn(),
@@ -30,20 +32,6 @@ const props = {
 };
 
 describe('Application test', () => {
-  it('should render index page', () => {
-    const comp = (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Switch>
-            <App dispatch={jest.fn()} />
-          </Switch>
-        </BrowserRouter>
-      </Provider>
-    );
-    const wrapper = mount(comp);
-
-    expect(wrapper.find('Home')).toBeTruthy();
-  });
   it('should not crash app', () => {
     const wrapper = mount(
       <Provider store={store}>
@@ -58,18 +46,6 @@ describe('Application test', () => {
       <Provider store={store}>
         <BrowserRouter>
           <LoginPage {...props} />
-        </BrowserRouter>
-      </Provider>
-    );
-
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
-
-  it('it should render Home Page without crashing', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <BrowserRouter>
-          <HomePage />
         </BrowserRouter>
       </Provider>
     );
