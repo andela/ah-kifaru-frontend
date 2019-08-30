@@ -10,7 +10,8 @@ import SocialMediaLogin from './SocialMediaLogin';
 const createStore = (isAuthenticated = false) => {
   const content = {
     authReducer: {
-      isAuthenticated: true
+      isAuthenticated: true,
+      username: 'onyimatics'
     }
   };
   const middlewares = [thunk];
