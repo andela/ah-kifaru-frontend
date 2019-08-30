@@ -62,271 +62,6 @@ exports[`Application test it should render 404 PAGE without crashing 1`] = `
 </BrowserRouter>
 `;
 
-exports[`Application test it should render Home Page without crashing 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <BrowserRouter>
-    <Router
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-    >
-      <Homepage>
-        <Layout>
-          <Connect(NavBar)>
-            <NavBar
-              dispatch={[Function]}
-              isLoggedIn={false}
-              user={Object {}}
-            >
-              <nav
-                className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
-              >
-                <div
-                  className="logo flex items-center"
-                >
-                  <Link
-                    aria-labelledby="Error Swag Logo"
-                    className="flex items-center"
-                    to="/"
-                  >
-                    <a
-                      aria-labelledby="Error Swag Logo"
-                      className="flex items-center"
-                      href="/"
-                      onClick={[Function]}
-                    >
-                      <img
-                        alt="Errorswag logo"
-                        className="sm:w-8/12 md:w-full"
-                        src={
-                          Object {
-                            "process": [Function],
-                          }
-                        }
-                      />
-                    </a>
-                  </Link>
-                </div>
-                <div
-                  className="flex"
-                >
-                  <Link
-                    aria-labelledby="Search"
-                    className="small-button"
-                    to="/search"
-                  >
-                    <a
-                      aria-labelledby="Search"
-                      className="small-button"
-                      href="/search"
-                      onClick={[Function]}
-                    >
-                      <icon-mock
-                        className="h-5 w-5"
-                      />
-                    </a>
-                  </Link>
-                  <Link
-                    aria-labelledby="Notifications"
-                    className="small-button"
-                    to="/notifications"
-                  >
-                    <a
-                      aria-labelledby="Notifications"
-                      className="small-button"
-                      href="/notifications"
-                      onClick={[Function]}
-                    >
-                      <icon-mock
-                        className="h-6 w-6"
-                      />
-                    </a>
-                  </Link>
-                  <AuthButtons
-                    id="auth-buttons"
-                    show={true}
-                  >
-                    <Link
-                      aria-labelledby="Login"
-                      className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                      to="/login"
-                    >
-                      <a
-                        aria-labelledby="Login"
-                        className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                        href="/login"
-                        onClick={[Function]}
-                      >
-                        LOGIN
-                      </a>
-                    </Link>
-                    <Link
-                      aria-labelledby="Signup"
-                      className="btn red-button py-3 px-8 sm:hidden md:block"
-                      to="/signup"
-                    >
-                      <a
-                        aria-labelledby="Signup"
-                        className="btn red-button py-3 px-8 sm:hidden md:block"
-                        href="/signup"
-                        onClick={[Function]}
-                      >
-                        GET STARTED
-                      </a>
-                    </Link>
-                  </AuthButtons>
-                  <MenuIcon
-                    id="menu"
-                    isLoggedIn={false}
-                    menuOpen={false}
-                    toggleMenu={[Function]}
-                  >
-                    <button
-                      aria-expanded={false}
-                      aria-label="Menu"
-                      className="hamburger small-button sm:block md:hidden"
-                      data-active={false}
-                      id="hamburger"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <span />
-                    </button>
-                  </MenuIcon>
-                </div>
-              </nav>
-            </NavBar>
-          </Connect(NavBar)>
-          <div
-            className="m-20 text-center"
-          >
-            <h1
-              className="text-green-800"
-            >
-              Welcome to ErrorSwag, what on your mind?
-            </h1>
-            <img
-              alt="errorswag logo"
-              src={
-                Object {
-                  "process": [Function],
-                }
-              }
-            />
-            <Link
-              to="articles/55"
-            >
-              <a
-                href="/articles/55"
-                onClick={[Function]}
-              >
-                <button
-                  className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-                  type="button"
-                >
-                  Comments
-                </button>
-              </a>
-            </Link>
-            <Link
-              to="/login"
-            >
-              <a
-                href="/login"
-                onClick={[Function]}
-              >
-                <button
-                  className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-                  type="button"
-                >
-                  Login
-                </button>
-              </a>
-            </Link>
-          </div>
-          <Footer>
-            <footer
-              className="footer flex flex-wrap w-full justify-center px-10"
-            >
-              <div
-                className="md:w-1/2 h-8"
-              >
-                <p
-                  className=" flex justify-start"
-                >
-                  Designed by Kifaru Team
-                </p>
-              </div>
-              <div
-                className="md:w-1/2 h-8"
-              >
-                <ul
-                  className="flex justify-end items-center"
-                >
-                  <li
-                    className="mx-1 px-2 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                  <li
-                    className="mx-1 px-4 py-1 cursor-pointer"
-                  >
-                    <icon-mock />
-                  </li>
-                </ul>
-              </div>
-            </footer>
-          </Footer>
-        </Layout>
-      </Homepage>
-    </Router>
-  </BrowserRouter>
-</Provider>
-`;
-
 exports[`Application test should not crash app 1`] = `
 <Provider
   store={
@@ -366,7 +101,15 @@ exports[`Application test should not crash app 1`] = `
       >
         <Switch>
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(LandingPage)",
+                "type": [Function],
+              }
+            }
             computedMatch={
               Object {
                 "isExact": true,
@@ -375,7 +118,6 @@ exports[`Application test should not crash app 1`] = `
                 "url": "/",
               }
             }
-            exact={true}
             location={
               Object {
                 "hash": "",
@@ -386,7 +128,7 @@ exports[`Application test should not crash app 1`] = `
             }
             path="/"
           >
-            <Homepage
+            <Connect(LandingPage)
               history={
                 Object {
                   "action": "POP",
@@ -424,229 +166,299 @@ exports[`Application test should not crash app 1`] = `
                 }
               }
             >
-              <Layout>
-                <Connect(NavBar)>
-                  <NavBar
-                    dispatch={[Function]}
-                    isLoggedIn={false}
-                    user={Object {}}
-                  >
-                    <nav
-                      className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
+              <LandingPage
+                fetchArticles={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <Layout>
+                  <Connect(NavBar)>
+                    <NavBar
+                      dispatch={[Function]}
+                      isLoggedIn={false}
+                      user={Object {}}
                     >
-                      <div
-                        className="logo flex items-center"
+                      <nav
+                        className="wrapper flex flex-row items-center justify-between pt-2 pb-2 md:pl-10 md:pr-10 sm:pl-4 sm:pr-4"
                       >
-                        <Link
-                          aria-labelledby="Error Swag Logo"
-                          className="flex items-center"
-                          to="/"
+                        <div
+                          className="logo flex items-center"
                         >
-                          <a
+                          <Link
                             aria-labelledby="Error Swag Logo"
                             className="flex items-center"
-                            href="/"
-                            onClick={[Function]}
+                            to="/"
                           >
-                            <img
-                              alt="Errorswag logo"
-                              className="sm:w-8/12 md:w-full"
-                              src={
-                                Object {
-                                  "process": [Function],
+                            <a
+                              aria-labelledby="Error Swag Logo"
+                              className="flex items-center"
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              <img
+                                alt="Errorswag logo"
+                                className="sm:w-8/12 md:w-full"
+                                src={
+                                  Object {
+                                    "process": [Function],
+                                  }
                                 }
-                              }
-                            />
-                          </a>
-                        </Link>
-                      </div>
-                      <div
-                        className="flex"
-                      >
-                        <Link
-                          aria-labelledby="Search"
-                          className="small-button"
-                          to="/search"
+                              />
+                            </a>
+                          </Link>
+                        </div>
+                        <div
+                          className="flex"
                         >
-                          <a
+                          <Link
                             aria-labelledby="Search"
                             className="small-button"
-                            href="/search"
-                            onClick={[Function]}
+                            to="/search"
                           >
-                            <icon-mock
-                              className="h-5 w-5"
-                            />
-                          </a>
-                        </Link>
-                        <Link
-                          aria-labelledby="Notifications"
-                          className="small-button"
-                          to="/notifications"
-                        >
-                          <a
+                            <a
+                              aria-labelledby="Search"
+                              className="small-button"
+                              href="/search"
+                              onClick={[Function]}
+                            >
+                              <icon-mock
+                                className="h-5 w-5"
+                              />
+                            </a>
+                          </Link>
+                          <Link
                             aria-labelledby="Notifications"
                             className="small-button"
-                            href="/notifications"
-                            onClick={[Function]}
-                          >
-                            <icon-mock
-                              className="h-6 w-6"
-                            />
-                          </a>
-                        </Link>
-                        <AuthButtons
-                          id="auth-buttons"
-                          show={true}
-                        >
-                          <Link
-                            aria-labelledby="Login"
-                            className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                            to="/login"
+                            to="/notifications"
                           >
                             <a
+                              aria-labelledby="Notifications"
+                              className="small-button"
+                              href="/notifications"
+                              onClick={[Function]}
+                            >
+                              <icon-mock
+                                className="h-6 w-6"
+                              />
+                            </a>
+                          </Link>
+                          <AuthButtons
+                            id="auth-buttons"
+                            show={true}
+                          >
+                            <Link
                               aria-labelledby="Login"
                               className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
-                              href="/login"
-                              onClick={[Function]}
+                              to="/login"
                             >
-                              LOGIN
-                            </a>
-                          </Link>
-                          <Link
-                            aria-labelledby="Signup"
-                            className="btn red-button py-3 px-8 sm:hidden md:block"
-                            to="/signup"
-                          >
-                            <a
+                              <a
+                                aria-labelledby="Login"
+                                className="btn btn-medium py-3 px-2 text-primary sm:hidden md:block mr-6"
+                                href="/login"
+                                onClick={[Function]}
+                              >
+                                LOGIN
+                              </a>
+                            </Link>
+                            <Link
                               aria-labelledby="Signup"
                               className="btn red-button py-3 px-8 sm:hidden md:block"
-                              href="/signup"
-                              onClick={[Function]}
+                              to="/signup"
                             >
-                              GET STARTED
-                            </a>
-                          </Link>
-                        </AuthButtons>
-                        <MenuIcon
-                          id="menu"
-                          isLoggedIn={false}
-                          menuOpen={false}
-                          toggleMenu={[Function]}
-                        >
-                          <button
-                            aria-expanded={false}
-                            aria-label="Menu"
-                            className="hamburger small-button sm:block md:hidden"
-                            data-active={false}
-                            id="hamburger"
-                            onClick={[Function]}
-                            type="button"
+                              <a
+                                aria-labelledby="Signup"
+                                className="btn red-button py-3 px-8 sm:hidden md:block"
+                                href="/signup"
+                                onClick={[Function]}
+                              >
+                                GET STARTED
+                              </a>
+                            </Link>
+                          </AuthButtons>
+                          <MenuIcon
+                            id="menu"
+                            isLoggedIn={false}
+                            menuOpen={false}
+                            toggleMenu={[Function]}
+                            user={Object {}}
                           >
-                            <span />
-                          </button>
-                        </MenuIcon>
+                            <button
+                              aria-expanded={false}
+                              aria-label="Menu"
+                              className="hamburger small-button sm:block md:hidden"
+                              data-active={false}
+                              id="hamburger"
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              <span />
+                            </button>
+                          </MenuIcon>
+                        </div>
+                      </nav>
+                    </NavBar>
+                  </Connect(NavBar)>
+                  <div
+                    className="w-full"
+                  >
+                    <SearchCard>
+                      <div
+                        className="flex bg-color h-64 header-card w-100 justify-center items-center"
+                      >
+                        <div
+                          className="flex flex-col justify-center items-center w-full p-4"
+                        >
+                          <h1
+                            className="text-white font-bold text-2xl text-center"
+                          >
+                            Your Ideas and thoughts are
+                          </h1>
+                          <h2
+                            className="text-white font-bold text-2xl"
+                          >
+                            worth sharing.
+                          </h2>
+                          <form
+                            className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white rounded pr-2"
+                            onSubmit={[Function]}
+                          >
+                            <icon-mock
+                              className="h-8 w-8 px-2"
+                            />
+                            <input
+                              className="w-full h-10 rounded text-sm outline-none"
+                              data-testid="searchInput"
+                              onChange={[Function]}
+                              placeholder="Search by author, interest, and title"
+                              type="text"
+                            />
+                          </form>
+                        </div>
                       </div>
-                    </nav>
-                  </NavBar>
-                </Connect(NavBar)>
-                <div
-                  className="m-20 text-center"
-                >
-                  <h1
-                    className="text-green-800"
-                  >
-                    Welcome to ErrorSwag, what on your mind?
-                  </h1>
-                  <img
-                    alt="errorswag logo"
-                    src={
-                      Object {
-                        "process": [Function],
-                      }
-                    }
-                  />
-                  <Link
-                    to="articles/55"
-                  >
-                    <a
-                      href="/articles/55"
-                      onClick={[Function]}
+                    </SearchCard>
+                    <div
+                      className=" w-11/12 mx-auto mt-6"
                     >
-                      <button
-                        className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-                        type="button"
+                      <div
+                        className="w-full flex flex-wrap justify-between"
                       >
-                        Comments
-                      </button>
-                    </a>
-                  </Link>
-                  <Link
-                    to="/login"
-                  >
-                    <a
-                      href="/login"
-                      onClick={[Function]}
-                    >
-                      <button
-                        className="bg-green-300 text-white p-2 hover:bg-green-700 border hover:border-red-300"
-                        type="button"
-                      >
-                        Login
-                      </button>
-                    </a>
-                  </Link>
-                </div>
-                <Footer>
-                  <footer
-                    className="footer flex flex-wrap w-full justify-center px-10"
+                        <span>
+                           There are no articles at the moment :( 
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="bottom-card h-64 flex flex-col items-end justify-center pr-12 mt-20 lg:mt-48"
                   >
                     <div
-                      className="md:w-1/2 h-8"
+                      className="text-white text-lg font-bold antialiased tracking-wide"
                     >
-                      <p
-                        className=" flex justify-start"
-                      >
-                        Designed by Kifaru Team
-                      </p>
+                      Your ideas and thoughts are
                     </div>
                     <div
-                      className="md:w-1/2 h-8"
+                      className="text-white text-lg font-bold antialiased tracking-wide"
                     >
-                      <ul
-                        className="flex justify-end items-center"
-                      >
-                        <li
-                          className="mx-1 px-2 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                        <li
-                          className="mx-1 px-4 py-1 cursor-pointer"
-                        >
-                          <icon-mock />
-                        </li>
-                      </ul>
+                      worth sharing.
                     </div>
-                  </footer>
-                </Footer>
-              </Layout>
-            </Homepage>
+                    <Link
+                      className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
+                      to="/"
+                    >
+                      <a
+                        className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        Start Writing
+                      </a>
+                    </Link>
+                  </div>
+                  <Footer>
+                    <footer
+                      className="footer flex flex-wrap w-full justify-center px-10"
+                    >
+                      <div
+                        className="md:w-1/2 h-8"
+                      >
+                        <p
+                          className=" flex justify-start"
+                        >
+                          Designed by Kifaru Team
+                        </p>
+                      </div>
+                      <div
+                        className="md:w-1/2 h-8"
+                      >
+                        <ul
+                          className="flex justify-end items-center"
+                        >
+                          <li
+                            className="mx-1 px-2 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                          <li
+                            className="mx-1 px-4 py-1 cursor-pointer"
+                          >
+                            <icon-mock />
+                          </li>
+                        </ul>
+                      </div>
+                    </footer>
+                  </Footer>
+                </Layout>
+              </LandingPage>
+            </Connect(LandingPage)>
           </Route>
         </Switch>
       </Router>

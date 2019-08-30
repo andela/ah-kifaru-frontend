@@ -45,6 +45,7 @@ const NavBar = ({ isLoggedIn, user }) => {
           isLoggedIn={isLoggedIn}
           toggleMenu={toggleMenu}
           menuOpen={menuOpen}
+          user={user}
         />
       </div>
       {menuOpen && <Dropdown />}
@@ -61,16 +62,12 @@ NavBar.propTypes = {
   isLoggedIn: PropTypes.bool,
   user: PropTypes.shape({
     id: PropTypes.number,
-    username: PropTypes.string
+    username: PropTypes.string,
+    avatar: PropTypes.string
   })
 };
 
-const mapToProps = state => ({
-  isLoggedIn: state.authReducer.isAuthenticated,
-  user: state.authReducer.user
-});
-
-const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen }) => {
+const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen, user }) => {
   return isLoggedIn ? (
     <button
       id="avatar"
@@ -79,7 +76,11 @@ const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen }) => {
       aria-label="Menu"
       onClick={toggleMenu}
     >
-      <AvatarIcon className="w-8 h-8" />
+      {Object.keys(user).length > 0 ? (
+        <img src={user.avatar} alt="User avatar" />
+      ) : (
+        <AvatarIcon className="w-8 h-8" />
+      )}
     </button>
   ) : (
     <button
@@ -96,10 +97,19 @@ const MenuIcon = ({ isLoggedIn, toggleMenu, menuOpen }) => {
   );
 };
 
+MenuIcon.defaultProps = {
+  user: {}
+};
+
 MenuIcon.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   menuOpen: PropTypes.bool.isRequired,
-  toggleMenu: PropTypes.func.isRequired
+  toggleMenu: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    username: PropTypes.string,
+    avatar: PropTypes.string
+  })
 };
 
 export const AuthButtons = ({ show }) => {
@@ -128,7 +138,14 @@ AuthButtons.propTypes = {
   show: PropTypes.bool.isRequired
 };
 
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.authReducer.isAuthenticated,
+    user: state.authReducer.user
+  };
+};
+
 export default connect(
-  mapToProps,
+  mapStateToProps,
   null
 )(NavBar);

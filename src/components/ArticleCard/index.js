@@ -4,34 +4,35 @@ import { Link } from 'react-router-dom';
 import './ArticleCard.scss';
 import authImage from '../../assets/images/author-image.png';
 import articleImage from '../../assets/images/article-image.png';
-import { BookmarkIcon, BookmarkedIcon } from '../../assets/icons';
+// import { BookmarkIcon, BookmarkedIcon } from '../../assets/icons';
 
 function ArticleCard(props) {
   const {
-    article = {},
-    isBookmarked = false,
-    showBookmark = true,
-    toggleBookmark
+    article = {}
+    // isBookmarked = false,
+    // showBookmark = true,
+    // toggleBookmark
   } = props;
 
   const {
     title = '',
+    id = '',
     description = '',
     body = '',
     image = '',
     publishedDate = '',
     readTime = '',
-    author,
+    username: author,
     tags = []
   } = article;
 
   return (
-    <article className="card flex md:flex-col mt-2 mb-2 shadow md:shadow">
-      <Link to="/articles/:id" className="flex w-2/6 md:w-full">
+    <article className="card flex md:flex-col mt-2 mb-6 shadow md:shadow">
+      <Link to={`/article/${id}`} className="flex w-2/6 md:w-full">
         <img className="article-image" src={articleImage} alt="author" />
       </Link>
-      <div className="flex flex-col flex-grow w-4/6 pl-3 md:pl-0 md:pt-2 md:w-full bg-white">
-        <Link to="/articles/:id" className="flex flex-col flex-grow">
+      <div className="flex flex-col flex-grow w-4/6 pl-4 md:pl-3 md:pl-0 md:pt-2 md:w-full">
+        <Link to={`/article/${id}`} className="flex flex-col flex-grow">
           <h3 className="text-base text-overflow-one-line font-bold mb-1 leading-tight">
             {title}
           </h3>
@@ -51,7 +52,7 @@ function ArticleCard(props) {
               data-testid="authorImage"
             />
             <div className="flex flex-col justify-center ml-1">
-              <p className="author-name font-extrabold md:text-base text-overflow-one-line">
+              <p className="author-name font-bold md:text-base text-overflow-one-line">
                 {author}
               </p>
               <p className="flex items-center">
@@ -60,7 +61,7 @@ function ArticleCard(props) {
                   aria-label={`published ${publishedDate}`}
                   data-testid="publishedDate"
                 >
-                  {publishedDate}
+                  {publishedDate || '25 Jun'}
                 </span>
                 &nbsp; &nbsp;
                 <span className="dotSeparator text-base" />
@@ -74,7 +75,7 @@ function ArticleCard(props) {
               </p>
             </div>
           </Link>
-          {showBookmark ? (
+          {/* {showBookmark ? (
             <button
               type="button"
               className="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200"
@@ -93,7 +94,7 @@ function ArticleCard(props) {
                 />
               )}
             </button>
-          ) : null}
+          ) : null} */}
         </div>
       </div>
     </article>
@@ -108,9 +109,9 @@ ArticleCard.defaultProps = {
   author: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   publishedDate: PropTypes.number.isRequired,
-  readTime: PropTypes.number.isRequired,
-  isBookmarked: PropTypes.bool.isRequired,
-  showBookmark: PropTypes.bool.isRequired
+  readTime: PropTypes.number.isRequired
+  // isBookmarked: PropTypes.bool.isRequired,
+  // showBookmark: PropTypes.bool.isRequired
 };
 
 ArticleCard.defaultProps = {

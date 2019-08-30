@@ -1,0 +1,16 @@
+/* content: url('../../../public/images/arrow_down.svg'); */
+
+.searchIcon {
+  background-image: url(../../assets/icons/search.svg);
+  background-color: orange;
+  background-repeat: no-repeat;
+  text-indent: 20px;
+}
+
+.bottom-card {
+  background-image: url('../../assets/images/bottom.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
