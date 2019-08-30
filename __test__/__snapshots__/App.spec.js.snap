@@ -832,9 +832,11 @@ exports[`Application test should work fine on Login Page 1`] = `
                   <h1
                     className="flex px-5 items-center text-left text-white text-2xl font-bold"
                   >
-                    Welcome back, 
+                    Welcome back,
+                     
                     <br />
-                     Sign in to share, recommend and bookmark.
+                     
+                    Sign in to share, recommend and bookmark.
                   </h1>
                 </div>
                 <Connect(LoginForm)

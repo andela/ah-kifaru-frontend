@@ -1,0 +1,10 @@
+.btnt:focus{
+  border-bottom: 3px solid blue;
+}
+
+
+@media(min-width:768px){
+  .w-30 {
+    width: 33%;
+  }
+}

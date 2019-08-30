@@ -87,7 +87,8 @@ export const ResetPasswordForm = ({
                       className="text-danger text-sm mt-4"
                       data-testid="password-error"
                     >
-                      *{errors.password}
+                      *
+                      {errors.password}
                     </p>
                   )}
                   <label className="label">
@@ -105,7 +106,8 @@ export const ResetPasswordForm = ({
                       className="text-danger text-sm mt-4"
                       data-testid="confirmpassword-error"
                     >
-                      *{errors.confirmpassword}
+                      *
+                      {errors.confirmpassword}
                     </p>
                   )}
                   {errorMessage && !errors.confirmpassword && (
@@ -113,7 +115,8 @@ export const ResetPasswordForm = ({
                       className="text-danger text-sm mt-4"
                       data-testid="server-error"
                     >
-                      *{errorMessage}
+                      *
+                      {errorMessage}
                     </p>
                   )}
                   <button
