@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { SearchIcon } from '../../assets/icons/index';
 import './index.css';
 
-export const SearchCard = () => {
+export const SearchCard = ({ history }) => {
   const [userInput, setUserInput] = useState([]);
 
   const handleChange = e => {
@@ -13,7 +13,8 @@ export const SearchCard = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    return <Redirect to="/search" state={userInput} />;
+    // return <Redirect to="/search" state={userInput} />;
+    history.push('/search');
   };
 
   return (

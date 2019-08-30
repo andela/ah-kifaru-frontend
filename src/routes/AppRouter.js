@@ -5,6 +5,8 @@ import NotFoundPage from '@pages/notFoundPage';
 import SignUpPage from '@pages/Signup/index';
 import PasswordResetPage from '@pages/ResetPassword';
 import RequestPasswordResetPage from '@pages/ForgotPassword';
+import SearchPage from '@pages/SearchPage';
+
 import ArticlesPage from '@pages/LandingPage/index';
 import Editor from '@pages/Article/NewArticle';
 import SingleArticlePage from '@pages/SingleArticle';
@@ -22,6 +24,7 @@ const App = () => (
         exact
         component={PasswordResetPage}
       />
+      <Route exact path="/" component={ArticlesPage} />
       <Route
         path="/forgot-password"
         exact
@@ -29,6 +32,7 @@ const App = () => (
       />
       <PrivateRoute path="/new-article" exact component={Editor} />
       <Route exact path="/" component={ArticlesPage} />
+      <Route exact path="/search" component={SearchPage} />
       <Route component={NotFoundPage} />
     </Switch>
   </Router>
