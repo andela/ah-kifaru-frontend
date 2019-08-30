@@ -137,7 +137,7 @@ exports[`CommentsCard should render CommentsCard Component 1`] = `
                             value=""
                           />
                           <p
-                            className="text-center text-red-600 font-medium text-xl"
+                            className="text-center text-red-600 font-medium text-base mt-8"
                           >
                             You need to login to post a comment!!!
                           </p>
