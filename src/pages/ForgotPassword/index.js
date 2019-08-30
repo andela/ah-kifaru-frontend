@@ -69,7 +69,8 @@ export const RequestPasswordResetForm = ({
                       data-testid="server-error"
                       className="text-danger text-sm mt-4"
                     >
-                      *{errorMessage}
+                      *
+                      {errorMessage}
                     </p>
                   )}
                   {errors.email && touched.email && (
@@ -77,7 +78,8 @@ export const RequestPasswordResetForm = ({
                       data-testid="email-error"
                       className="text-danger text-sm mt-4"
                     >
-                      *{errors.email}
+                      *
+                      {errors.email}
                     </p>
                   )}
                   <button

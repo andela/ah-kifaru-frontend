@@ -14,7 +14,7 @@ class SocialMediaLogin extends Component {
     } = this.props;
     if (search) {
       const token = search.split('=').pop();
-      saveToLocalStorage(token, null);
+      saveToLocalStorage({ token, url: null });
       const userData = decodeToken(this.props);
       loginSocial(userData);
     }

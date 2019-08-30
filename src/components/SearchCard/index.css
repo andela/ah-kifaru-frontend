@@ -1,0 +1,10 @@
+.search-card-form:focus-within {
+  outline: 3px solid teal;
+}
+
+.header-card {
+  background-image: url('../../assets/images/header.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

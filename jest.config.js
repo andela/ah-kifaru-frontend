@@ -27,7 +27,8 @@ module.exports = {
     '<rootDir>/src/components/icons',
     '<rootDir>/src/index.js',
     '<rootDir>/src/store/index.js',
-    '<rootDir>/src/config/'
+    '<rootDir>/src/config/',
+    '<rootDir>/src/pages/Article/'
   ],
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   transform: {

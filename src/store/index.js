@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import rootReducer from './modules';
+import rootReducer from './modules/index';
 import getUserInfo from '../utils/getUserFromToken';
 
 const loggerMiddleware = createLogger();
@@ -12,6 +12,7 @@ if (process.env.NODE_ENV === 'development') {
   middlewares.push(loggerMiddleware);
 }
 const user = getUserInfo();
+
 const store = createStore(
   rootReducer,
   {
