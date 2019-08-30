@@ -18,8 +18,8 @@ const authTypes = [
   SINGLE_ARTICLE_FAILED
 ];
 
-const articleReducer = (state = initialState, { type, payload }) => {
+const singleArticleReducer = (state = initialState, { type, payload }) => {
   return authTypes.includes(type) ? { ...state, ...payload } : state;
 };
 
-export default articleReducer;
+export default singleArticleReducer;

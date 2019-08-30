@@ -5,6 +5,7 @@ import resetPassword from './resetpassword/reducer';
 import articleReducer from './landingPage/reducer/index';
 import searchReducer from './search/reducer/index';
 import commentReducer from './comments/reducer';
+import singleArticleReducer from './articles/reducer';
 
 const rootReducer = combineReducers({
   authReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   articleReducer,
   searchReducer,
   commentReducer,
-  createArticleReducer
+  createArticleReducer,
+  singleArticleReducer
 });
 export default rootReducer;

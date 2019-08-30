@@ -114,7 +114,8 @@ SingleArticlePage.defaultProps = {
     avatar: '',
     avg_rating: '',
     count_rating: ''
-  }
+  },
+  isSuccess: false
 };
 
 SingleArticlePage.propTypes = {
@@ -141,9 +142,9 @@ SingleArticlePage.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  isLoading: state.articleReducer.isPending,
-  isSuccess: state.articleReducer.isSuccess,
-  article: state.articleReducer.article
+  isLoading: state.singleArticleReducer.isPending,
+  isSuccess: state.singleArticleReducer.isSuccess,
+  article: state.singleArticleReducer.article
 });
 
 const mapDispatchToProps = dispatch => ({
