@@ -13,8 +13,8 @@ export const calculateReadTime = content => {
 
 export const saveToLocalStorage = ({ token, url }) => {
   if (token) {
-    localStorage.setItem('token', JSON.stringify(token));
-    if (url) localStorage.setItem('url', JSON.stringify(url));
+    localStorage.setItem('token', token);
+    if (url) localStorage.setItem('url', url);
   }
 };
 

@@ -71,7 +71,7 @@ export const LandingPage = ({
           to="/"
           className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
         >
-          <button type="button">Start Writing</button>
+          Start Writing
         </Link>
       </div>
     </Layout>

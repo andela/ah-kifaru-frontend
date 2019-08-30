@@ -353,7 +353,7 @@ exports[`Application test should not crash app 1`] = `
                             worth sharing.
                           </h2>
                           <form
-                            className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white"
+                            className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white rounded pr-2"
                             onSubmit={[Function]}
                           >
                             <icon-mock
@@ -404,11 +404,7 @@ exports[`Application test should not crash app 1`] = `
                         href="/"
                         onClick={[Function]}
                       >
-                        <button
-                          type="button"
-                        >
-                          Start Writing
-                        </button>
+                        Start Writing
                       </a>
                     </Link>
                   </div>

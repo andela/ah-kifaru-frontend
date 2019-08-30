@@ -24,7 +24,7 @@ export const SearchCard = () => {
         </h1>
         <h2 className="text-white font-bold text-2xl">worth sharing.</h2>
         <form
-          className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white"
+          className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white rounded pr-2"
           onSubmit={handleSubmit}
         >
           <SearchIcon className="h-8 w-8 px-2" />
