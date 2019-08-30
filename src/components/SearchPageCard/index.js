@@ -3,27 +3,26 @@ import { Redirect } from 'react-router-dom';
 import { SearchIcon } from '../../assets/icons/index';
 import './index.css';
 
-export const SearchCard = ({ history }) => {
+export const SearchPageCard = ({ searchAction }) => {
   const [userInput, setUserInput] = useState([]);
 
+  /* istanbul ignore next */
   const handleChange = e => {
     const { value } = e.target;
+    /* istanbul ignore next */
     setUserInput(value);
   };
 
+  /* istanbul ignore next */
   const handleSubmit = e => {
     e.preventDefault();
-    // return <Redirect to="/search" state={userInput} />;
-    history.push('/search');
+    /* istanbul ignore next */
+    searchAction({ searchParameter: userInput });
   };
 
   return (
     <div className="flex bg-color h-64 header-card w-100 justify-center items-center">
       <div className="flex flex-col justify-center items-center w-full p-4">
-        <h1 className="text-white font-bold text-2xl text-center">
-          Your Ideas and thoughts are
-        </h1>
-        <h2 className="text-white font-bold text-2xl">worth sharing.</h2>
         <form
           className="search-card-form mt-6 w-10/12 md:w-6/12 text-center flex justify-center items-center bg-white rounded pr-2"
           onSubmit={handleSubmit}
@@ -42,4 +41,4 @@ export const SearchCard = ({ history }) => {
   );
 };
 
-export default SearchCard;
+export default SearchPageCard;

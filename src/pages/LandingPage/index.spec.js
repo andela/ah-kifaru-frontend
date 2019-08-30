@@ -35,6 +35,7 @@ describe('Landing Page', () => {
   test('landing page should render loading if fetch articles status is fetchPending', () => {
     const defaultProps = {
       fetchArticles,
+      history,
       status: 'fetchPending'
     };
     const { asFragment, getByTestId, debug } = render(

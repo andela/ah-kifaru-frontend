@@ -6,8 +6,10 @@ import '@testing-library/jest-dom/extend-expect';
 import { SearchCard } from './index';
 
 // const handleSearch = jest.fn();
+const history = { push: jest.fn() };
 const defaultProps = {
-  handleSearch: jest.fn()
+  handleSearch: jest.fn(),
+  history
 };
 
 const renderSearchCard = args => {
