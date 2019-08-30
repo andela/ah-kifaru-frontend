@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import ReactPaginate from 'react-paginate';
 import SyncLoader from 'react-spinners/FadeLoader';
 import { css } from '@emotion/core';
 
 import Layout from '@components/common/Layout';
-import { fetchArticlesAction } from '../../store/modules/landingPage/actions/index';
+import { searchAction } from '../../store/modules/search/actions/index';
 import ArticleCard from '../../components/ArticleCard/index';
-import { SearchCard } from '../../components/SearchCard/index';
+import SearchPageCard from '../../components/SearchPageCard/index';
 import './index.css';
 
 const override = css`
@@ -18,17 +17,16 @@ const override = css`
 `;
 
 export const LandingPage = ({
-  fetchArticles = () => {},
+  searchAction = () => {},
   allArticles = [],
-  status = '',
-  history
+  status = ''
 }) => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [limit, setLimit] = useState(12);
 
   useEffect(() => {
-    fetchArticles({ page, limit });
+    searchAction({ page, limit });
   }, []);
 
   if (status === 'fetchPending') {
@@ -48,7 +46,7 @@ export const LandingPage = ({
   return (
     <Layout>
       <div className="w-full">
-        <SearchCard history={history} />
+        <SearchPageCard searchAction={searchAction} />
         <div className=" w-11/12 mx-auto mt-6">
           <div className="w-full flex flex-wrap justify-between">
             {allArticles.length ? (
@@ -56,7 +54,10 @@ export const LandingPage = ({
                 return <ArticleCard key={article.id} article={article} />;
               })
             ) : (
-              <span> There are no articles at the moment :( </span>
+              <span className="mx-auto">
+                {' '}
+                There are no articles that match this at the moment :({' '}
+              </span>
             )}
           </div>
         </div>
@@ -69,7 +70,7 @@ export const LandingPage = ({
           worth sharing.
         </div>
         <Link
-          to="/new-article"
+          to="/"
           className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
         >
           Start Writing
@@ -80,13 +81,13 @@ export const LandingPage = ({
 };
 
 const mapStateToProps = state => ({
-  allArticles: state.articleReducer.articles,
-  status: state.articleReducer.status
+  allArticles: state.searchReducer.result,
+  status: state.searchReducer.searchStatus
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchArticles: ({ page, limit }) =>
-    dispatch(fetchArticlesAction({ page, limit }))
+  searchAction: ({ searchParameter, history }) =>
+    dispatch(searchAction({ searchParameter, history }))
 });
 
 export default connect(

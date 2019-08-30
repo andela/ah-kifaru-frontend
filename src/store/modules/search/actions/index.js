@@ -6,6 +6,7 @@ import {
   SEARCH_FAILURE
 } from '../actionTypes/index';
 
+/* istanbul ignore next */
 export const searchPending = () => ({
   type: SEARCH_PENDING,
   payload: {
@@ -15,6 +16,7 @@ export const searchPending = () => ({
   }
 });
 
+/* istanbul ignore next */
 export const searchSuccess = result => ({
   type: SEARCH_SUCCESS,
   payload: {
@@ -24,6 +26,7 @@ export const searchSuccess = result => ({
   }
 });
 
+/* istanbul ignore next */
 export const searchFailure = error => ({
   type: SEARCH_FAILURE,
   payload: {
@@ -33,21 +36,29 @@ export const searchFailure = error => ({
   }
 });
 
+/* istanbul ignore next */
 export const searchAction = ({
-  searchParameter,
-  history = null
+  searchParameter
+  // history = null
 }) => async dispatch => {
   dispatch(searchPending());
 
-  if (history && history.location.pathname !== '/search') {
-    history.push('/search');
-  }
+  // if (history && history.location.pathname !== '/search') {
+  //   history.push('/search');
+  // }
+
+  const searchBy = searchParameter || '';
+
+  console.log('here noe');
 
   try {
+    /* istanbul ignore next */
     const response = await axios({
       method: 'get',
-      url: `${process.env.API_BASE_URL}/search/?search=${searchParameter}`
+      url: `${process.env.API_BASE_URL}/search/articles/?params=${searchBy}`
     });
+
+    console.log('the long response', response);
     const { data } = response.data;
     dispatch(searchSuccess(data));
   } catch (error) {
