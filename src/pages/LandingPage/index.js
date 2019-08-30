@@ -61,16 +61,16 @@ export const LandingPage = ({
           </div>
         </div>
       </div>
-      <div className="bottom-card h-64 flex flex-col items-end justify-center pr-12 mt-20 lg:mt-48">
-        <div className="text-white text-lg font-bold antialiased tracking-wide">
+      <div className="bottom-card h-64 flex flex-col items-end justify-center pr-12 mt-20 pt-4 lg:mt-48">
+        <div className="text-white text-lg md:text-2xl font-extrabold antialiased tracking-wide">
           Your ideas and thoughts are
         </div>
-        <div className="text-white text-lg font-bold antialiased tracking-wide">
+        <div className="text-white text-lg md:text-2xl font-extrabold antialiased tracking-wide">
           worth sharing.
         </div>
         <Link
           to="/new-article"
-          className="mt-4 bg-white text-gray-700 px-6 py-2 rounded text-xs cursor-pointer"
+          className="mt-4 bg-white text-gray-700 px-10 py-4 rounded text-xs cursor-pointer font-bold"
         >
           Start Writing
         </Link>

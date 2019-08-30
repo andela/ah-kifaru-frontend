@@ -167,7 +167,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: (email, token) => dispatch(resetPasword(email, token))
+  onSubmit: (password, token) => dispatch(resetPasword(password, token))
 });
 
 export default connect(

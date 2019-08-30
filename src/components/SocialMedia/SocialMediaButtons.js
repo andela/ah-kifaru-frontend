@@ -4,9 +4,9 @@ import Google from './icons/google_btn.svg';
 import Github from './icons/github.svg';
 import './social.css';
 
-const GITHUB_LOGIN = `https://errorswag-staging.herokuapp.com/api/v1/auth/github`;
-const FACEBOOK_LOGIN = `https://errorswag-staging.herokuapp.com/api/v1/auth/facebook`;
-const GOOGLE_LOGIN = `https://errorswag-staging.herokuapp.com/api/v1/auth/google`;
+const GITHUB_LOGIN = `${process.env.API_BASE_URL}/auth/github`;
+const FACEBOOK_LOGIN = `${process.env.API_BASE_URL}/auth/facebook`;
+const GOOGLE_LOGIN = `${process.env.API_BASE_URL}/auth/google`;
 const SocialMedia = () => (
   <div className="flex flex-col justify-center items-center">
     <a href={GITHUB_LOGIN} className="mb-2">

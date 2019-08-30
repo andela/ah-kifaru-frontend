@@ -29,7 +29,7 @@ export const CreateComments = ({
               disabled={!isAuthenticated}
             />
             {!isAuthenticated ? (
-              <p className="text-center text-red-600 font-medium text-xl">
+              <p className="text-center text-red-600 font-medium text-base mt-8">
                 You need to login to post a comment!!!
               </p>
             ) : (
